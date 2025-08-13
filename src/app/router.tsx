@@ -3,13 +3,13 @@ import {
   createBrowserRouter,
 //   RouterProvider,
 } from "react-router-dom";
-import RootLayout from "@layouts/root";
+import RootLayout from "../layouts/root";
 // import DashboardLayout from "@layouts/dashboard";
 import { ROUTES } from "./routes";
 // import { RequireAuth } from "./guards";
 
-const Home = lazy(() => import("@pages/home"));
-const About = lazy(() => import("@pages/about"));
+const Home = lazy(() => import("../pages/home"));
+const About = lazy(() => import("../pages/about"));
 
 function ErrorPage() {
   return <div className="text-red-400">Something went wrong.</div>;

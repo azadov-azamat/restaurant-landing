@@ -1,0 +1,111 @@
+import { memo, useMemo } from "react";
+
+// Constants
+
+const socialLinks = [
+  { href: "#", label: "Telegram", icon: "/icons/telegram.png" },
+  { href: "#", label: "WhatsApp", icon: "/icons/whatsapp.png" },
+  { href: "#", label: "Facebook", icon: "/icons/facebook.png" },
+  { href: "#", label: "Instagram", icon: "/icons/instagram.png" },
+];
+
+const services = [
+  { text: "Цены", href: "#" },
+  { text: "Отслеживание", href: "#" },
+  { text: "Сообщить об ошибке", href: "#" },
+  { text: "Условия услуг", href: "#" },
+];
+
+const company = [
+  { text: "Отчетность", href: "#" },
+  { text: "Свяжитесь с нами", href: "#" },
+  { text: "Управление", href: "#" },
+];
+
+const address = [
+  "Узбекистан, Ташкент Улица, 24",
+  "+998948488448",
+  "info@bmgsoft.com",
+];
+
+type FooterItem = string | { text: string; href: string };
+
+const FooterSection = memo(({ title, items }: { title: string; items: FooterItem[] }) => (
+  <div className="space-y-4">
+    <h3 className="text-xl md:text-2xl font-bold">{title}</h3>
+    <ul className="space-y-3">
+      {items.map((item, idx) =>
+        typeof item === "string" ? (
+          <li key={idx} className="text-base font-normal">{item}</li>
+        ) : (
+          <li key={idx}>
+            <a href={item.href} className="text-base font-medium">
+              {item.text}
+            </a>
+          </li>
+        )
+      )}
+    </ul>
+  </div>
+));
+
+const LogoAndSocials = memo(() => (
+  <div className="space-y-4">
+    <h2 className="text-4xl font-bold">LOGO</h2>
+    <div className="flex space-x-4">
+      {socialLinks.map((link, idx) => (
+        <a key={idx} href={link.href} aria-label={link.label}>
+          <img
+            src={link.icon}
+            alt={link.label}
+            width={24}
+            height={24}
+            className="h-6 w-6"
+            loading="lazy"
+          />
+        </a>
+      ))}
+    </div>
+  </div>
+));
+
+export default function Footer() {
+
+  const overlayStyle = useMemo(
+      () => "absolute inset-0 bg-white/40  -z-9",
+      []
+  );
+
+  return (
+    <footer className="text-black relative h-[314px] flex items-center justify-center">
+      <div className={overlayStyle} />
+      {/* Background Image */}
+      <div className="absolute inset-0 -z-10">
+        <img
+          src="/images/footer.png"
+          alt="Footer background"
+          className="w-full h-full object-cover object-center transition-opacity duration-500 opacity-100"
+          loading="eager"
+        />
+      </div>
+
+      <div className="container mx-auto z-10">
+        {/* Mobile Layout */}
+        <div className="md:hidden space-y-10">
+          <LogoAndSocials />
+          <FooterSection title="Наши услуги" items={services} />
+          <FooterSection title="Наша компания" items={company} />
+          <FooterSection title="Адрес" items={address} />
+        </div>
+
+        {/* Desktop Layout */}
+        <div className="hidden md:grid md:grid-cols-4 md:gap-8">
+          <LogoAndSocials />
+          <FooterSection title="Наши услуги" items={services} />
+          <FooterSection title="Наша компания" items={company} />
+          <FooterSection title="Адрес" items={address} />
+        </div>
+      </div>
+    </footer>
+  );
+}
