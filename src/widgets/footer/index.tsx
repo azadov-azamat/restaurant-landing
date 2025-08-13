@@ -51,7 +51,13 @@ const FooterSection = memo(({ title, items }: { title: string; items: FooterItem
 
 const LogoAndSocials = memo(() => (
   <div className="space-y-4">
-    <h2 className="text-4xl font-bold">LOGO</h2>
+    <div className="w-40">
+      <img
+          src="/images/logo.png"
+          alt="footer-logo-background"
+          loading="lazy"
+      />
+    </div>
     <div className="flex space-x-4">
       {socialLinks.map((link, idx) => (
         <a key={idx} href={link.href} aria-label={link.label}>
@@ -85,7 +91,7 @@ export default function Footer() {
           src="/images/footer.png"
           alt="Footer background"
           className="w-full h-full object-cover object-center transition-opacity duration-500 opacity-100"
-          loading="eager"
+          loading="lazy"
         />
       </div>
 
