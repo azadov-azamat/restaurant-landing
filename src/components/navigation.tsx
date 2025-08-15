@@ -37,7 +37,7 @@ export default function Navigation({
                 <img
                     src="/images/logo.png"
                     className="w-[212px] -ml-8"
-                    alt="footer-logo-background"
+                    alt="navigation-logo-background"
                     loading="lazy"
                 />
               </Link>

@@ -14,8 +14,8 @@ function App() {
     <main className="my-8 space-y-14">
       <HeaderCard sampleNavLinks={sampleNavLinks}>
         <div className="flex flex-col md:flex-row items-center text-center md:text-start my-10">
-          <div className="w-1/2 space-y-4">
-            <h1 className="w-2/3 text-black font-medium text-4xl sm:text-6xl uppercase tracking-wide leading-tight">
+          <div className="md:w-1/2 w-full space-y-4">
+            <h1 className="md:w-2/3 w-full text-black font-medium text-4xl sm:text-6xl uppercase tracking-wide leading-tight">
               Вкусная еда ждет тебя!
             </h1>
             <Button showArrow variant="primary" size="md">
@@ -26,7 +26,6 @@ function App() {
           <div>
             <img
               src="/images/luxury.png"
-              
               alt="header-luxury"
               loading="lazy"
             />

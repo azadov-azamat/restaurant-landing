@@ -55,6 +55,7 @@ const LogoAndSocials = memo(() => (
       <img
           src="/images/logo.png"
           alt="footer-logo-background"
+          className="w-[212px] -ml-8"
           loading="lazy"
       />
     </div>
@@ -83,19 +84,19 @@ export default function Footer() {
   );
 
   return (
-    <footer className="z-10 text-black relative h-[314px] flex items-center justify-center">
+    <footer className="z-10 text-black relative md:h-[314px] md:p-0 py-4 h-auto flex items-center justify-center">
       <div className={overlayStyle} />
       {/* Background Image */}
       <div className="absolute inset-0 -z-10">
         <img
           src="/images/footer.png"
-          alt="Footer background"
+          alt="footer-background"
           className="w-full h-full object-cover object-center transition-opacity duration-500 opacity-100"
           loading="lazy"
         />
       </div>
 
-      <div className="container z-10">
+      <div className="container z-10 flex items-center justify-center">
         {/* Mobile Layout */}
         <div className="md:hidden space-y-10">
           <LogoAndSocials />

@@ -37,7 +37,7 @@ export default function RootLayout() {
             src="/images/main.jpg"
             alt="Background"
             onLoad={handleLoad}
-             className={bgImageClasses}
+            className={bgImageClasses}
             loading="lazy"
           />
           <img
