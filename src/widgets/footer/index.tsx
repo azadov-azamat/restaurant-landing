@@ -83,7 +83,7 @@ export default function Footer() {
   );
 
   return (
-    <footer className="text-black relative h-[314px] flex items-center justify-center">
+    <footer className="z-10 text-black relative h-[314px] flex items-center justify-center">
       <div className={overlayStyle} />
       {/* Background Image */}
       <div className="absolute inset-0 -z-10">
@@ -95,7 +95,7 @@ export default function Footer() {
         />
       </div>
 
-      <div className="container mx-auto z-10">
+      <div className="container z-10">
         {/* Mobile Layout */}
         <div className="md:hidden space-y-10">
           <LogoAndSocials />

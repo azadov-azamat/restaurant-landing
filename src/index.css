@@ -39,15 +39,15 @@
     max-width: 100%; /* default */
   }
 
-  @media (min-width: 1536px) {
+  @media (min-width: 1440px) {
     .container {
-      max-width: 1280px !important;
+      max-width: 1300px !important;
     }
   }
 }
 
 @layer base {
-  h1, h2   { @apply font-bold   font-sans; }   /* 700 → Bold */
+  h1, h2   { @apply font-bold font-sans; }   /* 700 → Bold */
   h3, a, button       { @apply font-semibold font-sans;}  /* 600 → SemiBold */
   h4       { @apply font-bold   font-sans;}    /* qo'lsiz o'zgartirsa bo'ladi */
   p, li, label, span    { @apply font-normal font-sans; }   /* 400 → Regular */

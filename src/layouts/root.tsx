@@ -11,7 +11,7 @@ export default function RootLayout() {
 
 
   const overlayStyle = useMemo(
-    () => "absolute inset-0 bg-white/40 backdrop-blur-[30px]",
+    () => "absolute inset-0 bg-white/20 backdrop-blur-[20px]",
     []
   );
 
@@ -24,39 +24,34 @@ export default function RootLayout() {
   );
 
   return (
-    <div className=" w-full">
+    <div className="relative w-full">
       {/* Dark blurred overlay */}
       <div className={overlayStyle} />
       
       <div className="fixed inset-0 -z-10 bg-black/80" />
 
-      <NavbarWidget />
-      <div className="relative container mx-auto overflow-hidden">
+      <div className="relative container overflow-hidden">
+        <NavbarWidget />
         <div className="absolute inset-0 -z-10">
           <img
-            src="/images/main.png"
+            src="/images/main.jpg"
             alt="Background"
             onLoad={handleLoad}
              className={bgImageClasses}
             loading="lazy"
           />
           <img
-              src="/images/main.png"
+              src="/images/main-2.jpg"
               alt="Background 2"
               className={bgImageClasses}
               loading="lazy"
           />
         </div>
 
-        <main className="relative mx-auto container min-h-screen">
+        <main className="relative container ">
           <Outlet />
         </main>
       </div>
-      
-      
-      {/* <main className="relative mx-auto container min-h-screen">
-        <Outlet />
-      </main> */}
       <FooterWidget/>
     </div>
   );

@@ -3,10 +3,9 @@ import { Phone, Mail, ChevronDown } from "lucide-react";
 
 const Navbar: React.FC = () => {
   return (
-    <header className="sticky top-0 z-50 ">
-      {/* <div className=""> */}
-        <div className="mx-auto container px-4 sm:px-6 lg:px-8">
-          <div className="flex h-14 items-center justify-between gap-4">
+    <header className="z-50 ">
+        <div className="container">
+          <div className="flex h-12 items-center justify-between gap-4">
             {/* Chap: Telefon va Email */}
             <div className="flex items-center gap-8">
               <a
@@ -52,8 +51,6 @@ const Navbar: React.FC = () => {
             </div>
           </div>
         </div>
-      {/* </div> */}
-      {/* <div className="pointer-events-none h-2 w-full bg-gradient-to-b from-white/20 to-transparent" /> */}
     </header>
   );
 };
