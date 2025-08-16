@@ -96,7 +96,7 @@ export default function Footer() {
         />
       </div>
 
-      <div className="container z-10 flex items-center justify-center">
+      <div className="z-10 flex items-center justify-center md:justify-between container">
         {/* Mobile Layout */}
         <div className="md:hidden space-y-10">
           <LogoAndSocials />
@@ -106,7 +106,7 @@ export default function Footer() {
         </div>
 
         {/* Desktop Layout */}
-        <div className="hidden md:grid md:grid-cols-4 md:gap-8">
+        <div className="hidden md:grid md:grid-cols-4 md:gap-24">
           <LogoAndSocials />
           <FooterSection title="Наши услуги" items={services} />
           <FooterSection title="Наша компания" items={company} />
