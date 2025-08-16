@@ -72,30 +72,30 @@ const foodData = [
         Популярные блюда
       </h2>
 
-{loaded && instanceRef.current && (<>
-    <button
-        onClick={(e: any) =>
-                e.stopPropagation() || instanceRef.current?.prev()
-              }
-        disabled={currentSlide === 0}
-        className="absolute -left-10 top-1/2 -translate-y-1/2 z-20  p-3 rounded-full hover:scale-110 transition"
-      >
-        <ChevronLeft />
-      </button>
-      <button
-        onClick={(e: any) =>
-                e.stopPropagation() || instanceRef.current?.next()
-              }
-        disabled={
-                currentSlide ===
-                instanceRef.current.track.details.slides.length - 1
-              }
-        className="absolute -right-10 top-1/2 -translate-y-1/2 z-20 p-3 rounded-full hover:scale-110 transition"
-      >
-        <ChevronRight width={33}/>
-      </button>
-</>)}
-      <div ref={sliderRef} className="keen-slider flex pt-10 !overflow-visible">
+        {loaded && instanceRef.current && (<>
+            <button
+                onClick={(e: any) =>
+                        e.stopPropagation() || instanceRef.current?.prev()
+                    }
+                disabled={currentSlide === 0}
+                className="absolute -left-10 top-1/2 -translate-y-1/2 z-20  p-3 rounded-full hover:scale-110 transition"
+            >
+                <ChevronLeft />
+            </button>
+            <button
+                onClick={(e: any) =>
+                        e.stopPropagation() || instanceRef.current?.next()
+                    }
+                disabled={
+                        currentSlide ===
+                        instanceRef.current.track.details.slides.length - 1
+                    }
+                className="absolute -right-10 top-1/2 -translate-y-1/2 z-20 p-3 rounded-full hover:scale-110 transition"
+            >
+                <ChevronRight width={33}/>
+            </button>
+        </>)}
+      <div ref={sliderRef} className="keen-slider flex pt-10 !overflow-visible z-10">
         {foodData.map((food, index) => (
           <motion.div
             key={index}
@@ -113,6 +113,22 @@ const foodData = [
           <Button showArrow variant="primary" size="md">
               Посмотреть меню
             </Button>
+        </div>
+
+        <div>
+            <img
+              src="/images/leaf/5.png"
+              alt="food-slider-leaf-5"
+              className="w-[140px] absolute -bottom-10 -left-8"
+              loading="lazy"
+            />
+
+            <img
+              src="/images/leaf/6.png"
+              alt="food-slider-leaf-5"
+              className="w-[160px] absolute -top-10 -right-8"
+              loading="lazy"
+            />
         </div>
     </div>
   );
