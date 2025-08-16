@@ -1,6 +1,6 @@
 import { memo, useMemo, useCallback } from "react";
 import type { FC } from "react";
-import { LucidePaintBucket, Plus } from "lucide-react";
+import { Heart, LucidePaintBucket, Plus } from "lucide-react";
 import { motion } from "framer-motion";
 import type { Variants } from "framer-motion";
 
@@ -55,15 +55,15 @@ const FoodCardComponent: FC<FoodCardProps> = ({
       <motion.div
         variants={IMAGE_VARIANTS}
         transition={{ duration: 0.3 }}
-        className="absolute -top-20 left-1/2 transform -translate-x-1/2 z-10"
+        className="absolute -top-20 left-1/2 transform -translate-x-[54%] z-10"
       >
-        <div className="w-40 h-40 rounded-full overflow-hidden">
+        <div className="w-56 h-52 rounded-full overflow-hidden">
           <img
             src={imgSrc}
             alt={title}
             className="w-full h-full object-cover"
-            width={160}
-            height={160}
+            width={220}
+            height={210}
             loading="lazy"
           />
         </div>
@@ -73,8 +73,9 @@ const FoodCardComponent: FC<FoodCardProps> = ({
       <div
         className="
           relative
+          w-[241px]
           h-full
-          pt-24 px-6 pb-6
+          pt-32 px-4 pb-4
           bg-white/50 backdrop-blur-[10px]
           border-2 border-white/20
           rounded-3xl
@@ -82,19 +83,25 @@ const FoodCardComponent: FC<FoodCardProps> = ({
         "
       >
         {/* Text Content */}
-        <div className="text-left text-black">
-          <h3 className="font-normal mb-2 text-[24px] leading-normal text-black">
-            {title}
-          </h3>
-          <p className="text-[15px] leading-normal font-normal text-black opacity-80">
-            {description}
-          </p>
+        <div className="flex items-start justify-between mb-2">
+            <div className="text-left text-black">
+              <h3 className="font-normal mb-1 text-xl leading-normal text-black">
+                {title}
+              </h3>
+              <p className="text-sm leading-normal font-normal text-black opacity-80">
+                {description}
+              </p>
+          </div>
+
+          <div className="mt-0.5">
+            <Heart size={15} strokeWidth={3}/>
+          </div>
         </div>
 
         {/* Price and Add Button */}
         <div className="flex items-end justify-between">
           <div className="text-black">
-            <span className="font-normal text-[24px] leading-normal text-black">
+            <span className="font-normal text-xl leading-normal text-black">
               {price}
             </span>
           </div>
@@ -105,7 +112,7 @@ const FoodCardComponent: FC<FoodCardProps> = ({
             whileTap="tap"
             onClick={handleAdd}
             className="
-              w-12 h-11
+              w-12 h-10
               bg-black
               rounded-lg
               flex items-center justify-center

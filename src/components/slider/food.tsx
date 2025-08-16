@@ -78,7 +78,7 @@ const foodData = [
                         e.stopPropagation() || instanceRef.current?.prev()
                     }
                 disabled={currentSlide === 0}
-                className="absolute -left-10 top-1/2 -translate-y-1/2 z-20  p-3 rounded-full hover:scale-110 transition"
+                className="absolute -left-12 top-1/2 -translate-y-1/2 z-20  p-3 rounded-full hover:scale-110 transition"
             >
                 <ChevronLeft />
             </button>
@@ -95,7 +95,7 @@ const foodData = [
                 <ChevronRight width={33}/>
             </button>
         </>)}
-      <div ref={sliderRef} className="keen-slider flex pt-10 !overflow-visible z-10">
+      <div ref={sliderRef} className="keen-slider flex pt-20 !overflow-visible z-10 my-10">
         {foodData.map((food, index) => (
           <motion.div
             key={index}
@@ -109,7 +109,7 @@ const foodData = [
         ))}
       </div>
 
-      <div className="flex justify-end mt-10">
+        <div className="flex justify-end mt-10">
           <Button showArrow variant="primary" size="md">
               Посмотреть меню
             </Button>
@@ -126,7 +126,7 @@ const foodData = [
             <img
               src="/images/leaf/6.png"
               alt="food-slider-leaf-5"
-              className="w-[160px] absolute -top-10 -right-8"
+              className="w-[160px] absolute -top-5 -right-8"
               loading="lazy"
             />
         </div>
