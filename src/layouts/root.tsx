@@ -30,7 +30,7 @@ export default function RootLayout() {
       
       <div className="fixed inset-0 -z-10 bg-black/80" />
 
-      <div className="relative container overflow-hidden">
+      <div className="relative container overflow-hidden ">
         <NavbarWidget />
         <div className="absolute inset-0 -z-10">
           <img

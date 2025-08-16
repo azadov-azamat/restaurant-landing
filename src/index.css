@@ -41,7 +41,9 @@
 
   @media (min-width: 1440px) {
     .container {
-      max-width: 1300px !important;
+      max-width: 1440px !important;
+      padding-left: 35px !important;
+      padding-right: 35px !important;
     }
   }
 }

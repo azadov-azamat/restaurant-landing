@@ -35,7 +35,7 @@ export default function FoodSlider() {
     },
   });
 
-const foodData = [
+    const foodData = [
     {
       title: "Chicken soup",
       description: "Spicy with garlic",
@@ -64,7 +64,7 @@ const foodData = [
       image: "/images/plate/4.png",
       onAdd: () => console.log("Added Chicken soup 4"),
     },
-  ]
+    ]
 
   return (
     <div className="relative">
@@ -119,14 +119,14 @@ const foodData = [
             <img
               src="/images/leaf/5.png"
               alt="food-slider-leaf-5"
-              className="w-[140px] absolute -bottom-10 -left-8"
+              className="w-[130px] absolute -bottom-2 -left-[70px]"
               loading="lazy"
             />
 
             <img
               src="/images/leaf/6.png"
               alt="food-slider-leaf-5"
-              className="w-[160px] absolute -top-5 -right-8"
+              className="w-[230px] absolute -top-5 -right-[70px]"
               loading="lazy"
             />
         </div>

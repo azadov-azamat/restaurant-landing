@@ -51,7 +51,7 @@ function App() {
             <h1 className="md:w-2/3 w-full text-black font-medium text-4xl sm:text-6xl uppercase tracking-wide leading-tight">
               Вкусная еда ждет тебя!
             </h1>
-            <Button showArrow variant="primary" size="md">
+            <Button showArrow variant="primary" size="md" className="mt-4">
               Посмотреть меню
             </Button>
           </div>
@@ -86,7 +86,7 @@ function App() {
             <img
               src="/images/leaf/4.png"
               alt="header-leaf-4"
-              className="w-60 absolute top-[68px] -left-6"
+              className="w-60 absolute top-[68px] -left-[70px]"
               loading="lazy"
             />
         </div>
