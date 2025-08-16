@@ -1,6 +1,6 @@
 import { memo, useMemo, useCallback } from "react";
 import type { FC } from "react";
-import { Plus } from "lucide-react";
+import { LucidePaintBucket, Plus } from "lucide-react";
 import { motion } from "framer-motion";
 import type { Variants } from "framer-motion";
 
@@ -49,7 +49,7 @@ const FoodCardComponent: FC<FoodCardProps> = ({
       animate="visible"
       whileHover="hover"
       transition={{ duration: 0.6 }}
-      className="relative w-[263px] h-[395px]"
+      className="relative w-[263px]"
     >
       {/* Food Image */}
       <motion.div
@@ -57,7 +57,7 @@ const FoodCardComponent: FC<FoodCardProps> = ({
         transition={{ duration: 0.3 }}
         className="absolute -top-20 left-1/2 transform -translate-x-1/2 z-10"
       >
-        <div className="w-40 h-40 rounded-full overflow-hidden border-2 border-yellow-400 shadow-2xl">
+        <div className="w-40 h-40 rounded-full overflow-hidden">
           <img
             src={imgSrc}
             alt={title}
@@ -75,26 +75,26 @@ const FoodCardComponent: FC<FoodCardProps> = ({
           relative
           h-full
           pt-24 px-6 pb-6
-          bg-white/5 backdrop-blur-[10px]
+          bg-white/50 backdrop-blur-[10px]
           border-2 border-white/20
           rounded-3xl
           flex flex-col justify-between
         "
       >
         {/* Text Content */}
-        <div className="text-left text-white">
-          <h3 className="font-normal mb-2 text-[24px] leading-normal text-white">
+        <div className="text-left text-black">
+          <h3 className="font-normal mb-2 text-[24px] leading-normal text-black">
             {title}
           </h3>
-          <p className="text-[15px] leading-normal font-normal text-white opacity-80">
+          <p className="text-[15px] leading-normal font-normal text-black opacity-80">
             {description}
           </p>
         </div>
 
         {/* Price and Add Button */}
-        <div className="flex items-end justify-between mt-auto">
-          <div className="text-white">
-            <span className="font-normal text-[24px] leading-normal text-white">
+        <div className="flex items-end justify-between">
+          <div className="text-black">
+            <span className="font-normal text-[24px] leading-normal text-black">
               {price}
             </span>
           </div>
@@ -105,15 +105,21 @@ const FoodCardComponent: FC<FoodCardProps> = ({
             whileTap="tap"
             onClick={handleAdd}
             className="
-              w-12 h-12
-              bg-white
-              rounded-xl
+              w-12 h-11
+              bg-black
+              rounded-lg
               flex items-center justify-center
               shadow-lg hover:shadow-xl
               transition-shadow
             "
           >
-            <Plus className="w-6 h-6 text-black" strokeWidth={2} />
+            <img
+              src="/icons/basket.png"
+              alt="footer-logo-background"
+              width={23}
+              loading="lazy"
+            />
+            {/* <LucidePaintBucket className="w-6 h-6 text-black" strokeWidth={2} /> */}
           </motion.button>
         </div>
       </div>

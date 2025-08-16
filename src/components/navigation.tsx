@@ -68,7 +68,7 @@ export default function Navigation({
                     loading="lazy"
                 />
                  <img
-                    src="/icons/basket.png"
+                    src="/icons/circle-basket.png"
                     width={34}
                     alt="footer-logo-background"
                     loading="lazy"
@@ -83,8 +83,8 @@ export default function Navigation({
                         alt="footer-logo-background"
                         loading="lazy"
                     />
-                        <img
-                        src="/icons/basket.png"
+                      <img
+                        src="/icons/circle-basket.png"
                         width={34}
                         alt="footer-logo-background"
                         loading="lazy"
