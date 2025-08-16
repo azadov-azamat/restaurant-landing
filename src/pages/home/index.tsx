@@ -91,22 +91,44 @@ function App() {
             />
         </div>
       </HeaderCard>
-      {/* <div> */}
-        {/* <h2 className="text-3xl md:text-4xl font-bold text-black text-center mb-36">
-          Популярные блюда
-        </h2> */}
-        {/* <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-4">
-            {
-              foodData.map((food, index) => <FoodCard key={index} {...food} />)
-            }
-        </div> */}
-        <FoodSlider />
-        {/* <div className="flex justify-end mt-10">
-          <Button showArrow variant="primary" size="md">
-              Посмотреть меню
-            </Button>
-        </div> */}
-      {/* </div> */}
+      
+      <FoodSlider />
+
+      <div className="flex relative flex-col md:flex-row items-center text-center md:text-start mb-20 mt-40">
+        <div>
+              <div className="mock-form w-[463px] h-[760px] bg-white/50 backdrop-blur-[10px] border-2 border-white/20 rounded-3xl flex flex-col justify-between p-6">
+
+              </div>
+        </div>
+        <div className="">
+          <img
+            src="/images/pizza.png"
+            alt="header-leaf-2"
+            className="absolute -top-24 -right-[70px] w-[840px]"
+            loading="lazy"
+          />
+        </div>
+
+        <img
+          src="/images/leaf/7.png"
+          alt="header-leaf-3"
+          className="w-[430px] absolute -top-[12pc] left-[28pc]"
+          loading="lazy"
+        />
+
+        <img
+          src="/images/leaf/8.png"
+          alt="header-leaf-3"
+          className="w-[430px] absolute -bottom-[8pc] right-[18pc]"
+          loading="lazy"
+        />
+      </div>
+        
+      <div className="relative">
+        <h2 className="text-3xl md:text-4xl font-bold text-black text-center mb-12">
+          Почему именно мы?
+        </h2>
+      </div>
     </main>
 
   )
