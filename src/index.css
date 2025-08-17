@@ -33,6 +33,10 @@
   font-display: swap;
 }
 
+@theme {
+  --font-gilroy: "Gilroy", sans-serif;
+}
+
 @layer components {
   .container {
     @apply mx-auto px-4;
@@ -49,10 +53,10 @@
 }
 
 @layer base {
-  h1, h2   { @apply font-bold font-sans; }   /* 700 → Bold */
-  h3, a, button       { @apply font-semibold font-sans;}  /* 600 → SemiBold */
-  h4       { @apply font-bold   font-sans;}    /* qo'lsiz o'zgartirsa bo'ladi */
-  p, li, label, span    { @apply font-normal font-sans ; }   /* 400 → Regular */
+  h1, h2   { @apply font-bold font-gilroy; }   /* 700 → Bold */
+  h3, a, button       { @apply font-semibold font-gilroy;}  /* 600 → SemiBold */
+  h4       { @apply font-bold font-gilroy;}    /* qo'lsiz o'zgartirsa bo'ladi */
+  p, li, label, span    { @apply font-normal font-gilroy; }   /* 400 → Regular */
   button { @apply cursor-pointer; }
 }
 
