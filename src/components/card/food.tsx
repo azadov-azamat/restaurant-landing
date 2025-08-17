@@ -1,6 +1,6 @@
 import { memo, useMemo, useCallback } from "react";
 import type { FC } from "react";
-import { Heart, LucidePaintBucket, Plus } from "lucide-react";
+import { Heart } from "lucide-react";
 import { motion } from "framer-motion";
 import type { Variants } from "framer-motion";
 
@@ -126,7 +126,6 @@ const FoodCardComponent: FC<FoodCardProps> = ({
               width={23}
               loading="lazy"
             />
-            {/* <LucidePaintBucket className="w-6 h-6 text-black" strokeWidth={2} /> */}
           </motion.button>
         </div>
       </div>

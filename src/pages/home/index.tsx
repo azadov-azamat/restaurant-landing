@@ -1,5 +1,4 @@
 import FeatureCard from "../../components/card/feature";
-import { FoodCard } from "../../components/card/food";
 import HeaderCard from "../../components/card/header"
 import { Button } from "../../components/custom/button"
 import FoodSlider from "../../components/slider/food";
