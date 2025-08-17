@@ -63,7 +63,7 @@ export default function Navigation({
             <div className="hidden md:flex items-center space-x-4">
                 <img
                     src="/icons/favorite.png"
-                  width={34}
+                    width={34}
                     alt="footer-logo-background"
                     loading="lazy"
                 />

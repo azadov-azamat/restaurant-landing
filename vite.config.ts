@@ -18,5 +18,9 @@ export default defineConfig({
       '@layouts': path.resolve(__dirname, 'src/layouts'),
       '@widgets': path.resolve(__dirname, 'src/widgets'),
     }
+  },
+  optimizeDeps: {
+    include: [ "react", "react-dom", "react-router-dom", "axios", "framer-motion", "aos", "jwt-decode", "react-hook-form" ],
+    exclude: [],
   }
 })

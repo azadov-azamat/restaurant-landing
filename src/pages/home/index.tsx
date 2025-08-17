@@ -76,7 +76,7 @@ function App() {
             <img
               src="/images/luxury.png"
               alt="header-luxury"
-              loading="lazy"
+              loading="eager"
             />
           </div>
         </div>

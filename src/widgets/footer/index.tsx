@@ -92,7 +92,7 @@ export default function Footer() {
           src="/images/footer.png"
           alt="footer-background"
           className="w-full h-full object-cover object-center transition-opacity duration-500 opacity-100"
-          loading="lazy"
+          loading="eager"
         />
       </div>
 

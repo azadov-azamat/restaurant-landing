@@ -25,6 +25,7 @@ const NewsCardComponent: React.FC<NewsCardProps> = ({
           src={imageSrc}
           alt="Preview"
           className="w-[213px] h-[156px] object-cover object-center rounded-3xl shadow-2xl"
+          loading="lazy"
         />
       </div>
 
@@ -40,6 +41,7 @@ const NewsCardComponent: React.FC<NewsCardProps> = ({
               src={avatarSrc}
               alt="Avatar"
               className="w-full h-full object-cover"
+              loading="lazy"
             />
           </div>
           <span className="text-lg font-bold">{name}</span>
