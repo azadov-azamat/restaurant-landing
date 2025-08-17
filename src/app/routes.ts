@@ -1,6 +1,7 @@
 // bitta joyda nomlangan path'lar
 export const ROUTES = {
   home: '/',
+  menu: '/menu',
   about: '/about',
 } as const;
 

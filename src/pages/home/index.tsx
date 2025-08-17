@@ -5,63 +5,56 @@ import FoodSlider from "../../components/slider/food";
 import NewsSlider from "../../components/slider/news";
 
 function App() {
-  const sampleNavLinks = [
-    { label: "Меню", href: "/"},
-    { label: "Новости", href: "/news"},
-    { label: "Бронирование", href: "/chef/news"},
-    { label: "О нас", href: "/about-us"},
-    { label: "Контакты", href: "/contacts"},
-  ]
-
+  
  const featuresData = [
-  {
-    icon: "/icons/soup.png",
-    title: "Качественные продукты",
-    width: 48,
-    description:
-      "Входные билеты в музеи, для посещения достопримечательностей, памятников",
-  },
-  {
-    icon: "/icons/taxi-car.png",
-    title: "Быстрая доставка",
-    width: 40,
-    description:
-      "Входные билеты в музеи, для посещения достопримечательностей, памятников",
-  },
-  {
-    icon: "/icons/pizza.png",
-    title: "Вкусные рецепты",
-    width: 67,
-    description:
-      "Входные билеты в музеи, для посещения достопримечательностей, памятников",
-  },
-  {
-    icon: "/icons/terrace.png",
-    title: "Уютная атмосфера",
-    width: 40,
-    description:
-      "Входные билеты в музеи, для посещения достопримечательностей, памятников",
-  },
-  {
-    icon: "/icons/shef.png",
-    title: "Опытные повара",
-    width: 48,
-    description:
-      "Входные билеты в музеи, для посещения достопримечательностей, памятников",
-  },
-  {
-    icon: "/icons/user-following.png",
-    title: "Обслуживания",
-    width: 40,
-    description:
-      "Входные билеты в музеи, для посещения достопримечательностей, памятников",
-  },
-];
+    {
+      icon: "/icons/soup.png",
+      title: "Качественные продукты",
+      width: 48,
+      description:
+        "Входные билеты в музеи, для посещения достопримечательностей, памятников",
+    },
+    {
+      icon: "/icons/taxi-car.png",
+      title: "Быстрая доставка",
+      width: 40,
+      description:
+        "Входные билеты в музеи, для посещения достопримечательностей, памятников",
+    },
+    {
+      icon: "/icons/pizza.png",
+      title: "Вкусные рецепты",
+      width: 67,
+      description:
+        "Входные билеты в музеи, для посещения достопримечательностей, памятников",
+    },
+    {
+      icon: "/icons/terrace.png",
+      title: "Уютная атмосфера",
+      width: 40,
+      description:
+        "Входные билеты в музеи, для посещения достопримечательностей, памятников",
+    },
+    {
+      icon: "/icons/shef.png",
+      title: "Опытные повара",
+      width: 48,
+      description:
+        "Входные билеты в музеи, для посещения достопримечательностей, памятников",
+    },
+    {
+      icon: "/icons/user-following.png",
+      title: "Обслуживания",
+      width: 40,
+      description:
+        "Входные билеты в музеи, для посещения достопримечательностей, памятников",
+    },
+  ];
 
 
   return (
     <main className="mt-8 mb-16 space-y-16">
-      <HeaderCard sampleNavLinks={sampleNavLinks}>
+      <HeaderCard>
         <div className="flex flex-col md:flex-row items-center text-center md:text-start my-10">
           <div className="md:w-1/2 w-full space-y-4">
             <h1 className="md:w-2/3 w-full text-black font-medium text-4xl sm:text-6xl uppercase tracking-wide leading-tight">
@@ -87,12 +80,6 @@ function App() {
               className="w-[510px] absolute top-[3pc] left-[15pc]"
               loading="lazy"
             />
-            {/* <img
-              src="/images/leaf/2.png"
-              alt="header-leaf-2"
-              className="absolute bottom-0 right-0"
-              loading="lazy"
-            /> */}
             <img
               src="/images/leaf/3.png"
               alt="header-leaf-3"

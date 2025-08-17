@@ -1,7 +1,6 @@
 import HeaderCard from "../../components/card/header"
-import NewsSlider from "../../components/slider/news";
 
-function About() {
+function News() {
   return (
     <main className="mt-8 mb-16 space-y-16">
       <HeaderCard>
@@ -27,11 +26,9 @@ function About() {
             />
         </div>
       </HeaderCard>
-    
-      <NewsSlider />
     </main>
 
   )
 }
 
-export default About
+export default News

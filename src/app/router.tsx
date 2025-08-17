@@ -1,14 +1,10 @@
 import { lazy } from "react";
-import {
-  createBrowserRouter,
-//   RouterProvider,
-} from "react-router-dom";
+import { createBrowserRouter } from "react-router-dom";
 import RootLayout from "../layouts/root";
-// import DashboardLayout from "@layouts/dashboard";
 import { ROUTES } from "./routes";
-// import { RequireAuth } from "./guards";
 
 const Home = lazy(() => import("../pages/home"));
+const Menu = lazy(() => import("../pages/menu"));
 const About = lazy(() => import("../pages/about"));
 
 function ErrorPage() {
@@ -23,6 +19,7 @@ export const router = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [
       { index: true, element: <Home /> },
+      { path: ROUTES.menu, element: <Menu /> },
       { path: ROUTES.about, element: <About /> },
     //   { path: ROUTES.login, element: <Login /> },
 
