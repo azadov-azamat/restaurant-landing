@@ -1,3 +1,4 @@
+import FeatureCard from "../../components/card/feature";
 import { FoodCard } from "../../components/card/food";
 import HeaderCard from "../../components/card/header"
 import { Button } from "../../components/custom/button"
@@ -12,36 +13,51 @@ function App() {
     { label: "Контакты", href: "/contacts"},
   ]
 
-  const foodData = [
-    {
-      title: "Chicken soup",
-      description: "Spicy with garlic",
-      price: "$10.00",
-      image: "/images/plate/1.png",
-      onAdd: () => console.log("Added Chicken soup 1"),
-    },
-    {
-      title: "Chicken soup",
-      description: "Spicy with garlic",
-      price: "$10.00",
-      image: "/images/plate/2.png",
-      onAdd: () => console.log("Added Chicken soup 2"),
-    },
-    {
-      title: "Chicken soup",
-      description: "Spicy with garlic",
-      price: "$10.00",
-      image: "/images/plate/3.png",
-      onAdd: () => console.log("Added Chicken soup 3"),
-    },
-    {
-      title: "Chicken soup",
-      description: "Spicy with garlic",
-      price: "$10.00",
-      image: "/images/plate/4.png",
-      onAdd: () => console.log("Added Chicken soup 4"),
-    },
-  ];
+ const featuresData = [
+  {
+    icon: "/icons/soup.png",
+    title: "Качественные продукты",
+    width: 48,
+    description:
+      "Входные билеты в музеи, для посещения достопримечательностей, памятников",
+  },
+  {
+    icon: "/icons/taxi-car.png",
+    title: "Быстрая доставка",
+    width: 40,
+    description:
+      "Входные билеты в музеи, для посещения достопримечательностей, памятников",
+  },
+  {
+    icon: "/icons/pizza.png",
+    title: "Вкусные рецепты",
+    width: 67,
+    description:
+      "Входные билеты в музеи, для посещения достопримечательностей, памятников",
+  },
+  {
+    icon: "/icons/terrace.png",
+    title: "Уютная атмосфера",
+    width: 40,
+    description:
+      "Входные билеты в музеи, для посещения достопримечательностей, памятников",
+  },
+  {
+    icon: "/icons/shef.png",
+    title: "Опытные повара",
+    width: 48,
+    description:
+      "Входные билеты в музеи, для посещения достопримечательностей, памятников",
+  },
+  {
+    icon: "/icons/user-following.png",
+    title: "Обслуживания",
+    width: 40,
+    description:
+      "Входные билеты в музеи, для посещения достопримечательностей, памятников",
+  },
+];
+
 
   return (
     <main className="my-8 space-y-14">
@@ -123,12 +139,20 @@ function App() {
           loading="lazy"
         />
       </div>
-        
-      <div className="relative">
+
+       <section className="py-16">
         <h2 className="text-3xl md:text-4xl font-bold text-black text-center mb-12">
           Почему именно мы?
         </h2>
-      </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          {featuresData.map((item, index) => (
+            <FeatureCard
+              key={index}
+              {...item}
+            />
+          ))}
+        </div>
+      </section>
     </main>
 
   )
