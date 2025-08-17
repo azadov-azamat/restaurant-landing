@@ -2,6 +2,7 @@ import FeatureCard from "../../components/card/feature";
 import HeaderCard from "../../components/card/header"
 import { Button } from "../../components/custom/button"
 import FoodSlider from "../../components/slider/food";
+import NewsSlider from "../../components/slider/news";
 
 function App() {
   const sampleNavLinks = [
@@ -59,7 +60,7 @@ function App() {
 
 
   return (
-    <main className="my-8 space-y-14">
+    <main className="mt-8 mb-16 space-y-16">
       <HeaderCard sampleNavLinks={sampleNavLinks}>
         <div className="flex flex-col md:flex-row items-center text-center md:text-start my-10">
           <div className="md:w-1/2 w-full space-y-4">
@@ -109,9 +110,9 @@ function App() {
       
       <FoodSlider />
 
-      <div className="flex relative flex-col md:flex-row items-center text-center md:text-start mb-20 mt-40">
+      <div className="flex relative flex-col md:flex-row items-center text-center md:text-start mt-18">
         <div>
-              <div className="mock-form w-[463px] h-[760px] bg-white/50 backdrop-blur-[10px] border-2 border-white/20 rounded-3xl flex flex-col justify-between p-6">
+              <div className="mock-form w-[463px] h-[760px] rounded-3xl bg-white/50 backdrop-blur-[10px] flex flex-col justify-between p-6">
 
               </div>
         </div>
@@ -139,11 +140,11 @@ function App() {
         />
       </div>
 
-       <section className="py-16">
-        <h2 className="text-3xl md:text-4xl font-bold text-black text-center mb-12">
+       <section> 
+        <h2 className="text-3xl md:text-4xl font-extrabold text-black text-center mb-12">
           Почему именно мы?
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 space-x-8 space-y-16">
           {featuresData.map((item, index) => (
             <FeatureCard
               key={index}
@@ -152,6 +153,8 @@ function App() {
           ))}
         </div>
       </section>
+
+      <NewsSlider />
     </main>
 
   )

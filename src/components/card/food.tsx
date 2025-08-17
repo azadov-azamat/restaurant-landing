@@ -77,7 +77,6 @@ const FoodCardComponent: FC<FoodCardProps> = ({
           h-full
           pt-32 px-4 pb-4
           bg-white/50 backdrop-blur-[10px]
-          border-2 border-white/20
           rounded-3xl
           flex flex-col justify-between
         "
@@ -85,7 +84,7 @@ const FoodCardComponent: FC<FoodCardProps> = ({
         {/* Text Content */}
         <div className="flex items-start justify-between mb-2">
             <div className="text-left text-black">
-              <h3 className="font-normal mb-1 text-xl leading-normal text-black">
+              <h3 className="font-bold mb-1 text-xl leading-normal text-black">
                 {title}
               </h3>
               <p className="text-sm leading-normal font-normal text-black opacity-80">

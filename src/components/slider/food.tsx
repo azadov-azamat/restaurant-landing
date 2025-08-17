@@ -1,7 +1,6 @@
 "use client";
 
 import { useKeenSlider } from "keen-slider/react";
-import "keen-slider/keen-slider.min.css";
 import { motion } from "framer-motion";
 import { FoodCard } from "../card/food";
 import { Button } from "../custom/button";
@@ -68,7 +67,7 @@ export default function FoodSlider() {
 
   return (
     <div className="relative">
-      <h2 className="text-3xl md:text-4xl font-bold text-black text-center mb-12">
+      <h2 className="text-3xl md:text-4xl font-extrabold text-black text-center mb-12">
         Популярные блюда
       </h2>
 
@@ -80,7 +79,7 @@ export default function FoodSlider() {
                 disabled={currentSlide === 0}
                 className="absolute -left-12 top-1/2 -translate-y-1/2 z-20  p-3 rounded-full hover:scale-110 transition"
             >
-                <ChevronLeft />
+                <ChevronLeft size={36}/>
             </button>
             <button
                 onClick={(e: any) =>
@@ -90,12 +89,12 @@ export default function FoodSlider() {
                         currentSlide ===
                         instanceRef.current.track.details.slides.length - 1
                     }
-                className="absolute -right-10 top-1/2 -translate-y-1/2 z-20 p-3 rounded-full hover:scale-110 transition"
+                className="absolute -right-12 top-1/2 -translate-y-1/2 z-20 p-3 rounded-full hover:scale-110 transition"
             >
-                <ChevronRight width={33}/>
+                <ChevronRight size={36}/>
             </button>
         </>)}
-      <div ref={sliderRef} className="keen-slider flex pt-20 !overflow-visible z-10 my-10">
+      <div ref={sliderRef} className="keen-slider flex pt-20 !overflow-visible z-10 my-16">
         {foodData.map((food, index) => (
           <motion.div
             key={index}
@@ -109,7 +108,7 @@ export default function FoodSlider() {
         ))}
       </div>
 
-        <div className="flex justify-end mt-10">
+        <div className="flex justify-end">
           <Button showArrow variant="primary" size="md">
               Посмотреть меню
             </Button>
