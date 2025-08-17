@@ -55,7 +55,7 @@ export default function Pagination({
         whileTap="tap"
         onClick={() => onPageChange(Math.max(1, currentPage - 1))}
         disabled={currentPage === 1}
-        className="w-12 h-12 rounded-full border border-gray-400 bg-transparent text-white flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed hover:border-white transition-colors"
+        className="w-12 h-12 rounded-full text-black flex items-center justify-center"
       >
         <ChevronLeft className="w-5 h-5" />
       </motion.button>
@@ -68,7 +68,7 @@ export default function Pagination({
             whileHover="hover"
             whileTap="tap"
             onClick={() => onPageChange(1)}
-            className="w-12 h-12 rounded-full border border-gray-400 bg-transparent text-white flex items-center justify-center hover:border-white transition-colors"
+            className="w-12 h-12 rounded-full border border-gray-400 bg-white/50 backdrop-blur-[10px] text-black flex items-center justify-center hover:border-white transition-colors"
           >
             1
           </motion.button>
@@ -84,8 +84,8 @@ export default function Pagination({
           whileHover="hover"
           whileTap="tap"
           onClick={() => onPageChange(page)}
-          className={`w-12 h-12 rounded-full border text-white flex items-center justify-center transition-colors ${
-            page === currentPage ? "bg-gray-600 border-gray-600" : "border-gray-400 bg-transparent hover:border-white"
+          className={`w-12 h-12 rounded-full border text-black flex items-center justify-center border-black transition-colors backdrop-blur-[10px] ${
+            page === currentPage ? "bg-white" : "bg-white/20 "
           }`}
         >
           {page}
@@ -115,7 +115,7 @@ export default function Pagination({
         whileTap="tap"
         onClick={() => onPageChange(Math.min(totalPages, currentPage + 1))}
         disabled={currentPage === totalPages}
-        className="w-12 h-12 rounded-full border border-gray-400 bg-transparent text-white flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed hover:border-white transition-colors"
+        className="w-12 h-12 rounded-full text-black flex items-center justify-center"
       >
         <ChevronRight className="w-5 h-5" />
       </motion.button>

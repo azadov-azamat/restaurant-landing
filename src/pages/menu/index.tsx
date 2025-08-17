@@ -53,13 +53,14 @@ function Menu() {
               onChange={(index) => console.log("Active tab:", index)}
             />
           </div>
-        <div>
-
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 md:grid-cols-3 gap-6 mt-32 space-y-24">
           {
             [...foodData, ...foodData, ...foodData, ...foodData].map((food, index) => <FoodCard key={index} {...food} />)
           }
+          <div></div>
         </div>
+
+        <div>
           <img
               src="/images/menu-leaf/1.png"
               alt="menu-header-leaf-1"
