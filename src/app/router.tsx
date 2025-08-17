@@ -6,6 +6,9 @@ import { ROUTES } from "./routes";
 const Home = lazy(() => import("../pages/home"));
 const Menu = lazy(() => import("../pages/menu"));
 const About = lazy(() => import("../pages/about"));
+const Booking = lazy(() => import("../pages/booking"));
+const Contacts = lazy(() => import("../pages/contacts"));
+const News = lazy(() => import("../pages/news"));
 
 function ErrorPage() {
   return <div className="text-red-400">Something went wrong.</div>;
@@ -21,6 +24,9 @@ export const router = createBrowserRouter([
       { index: true, element: <Home /> },
       { path: ROUTES.menu, element: <Menu /> },
       { path: ROUTES.about, element: <About /> },
+      { path: ROUTES.booking, element: <Booking /> },
+      { path: ROUTES.contacts, element: <Contacts /> },
+      { path: ROUTES.news, element: <News /> },
     //   { path: ROUTES.login, element: <Login /> },
 
     //   {
