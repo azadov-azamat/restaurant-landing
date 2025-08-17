@@ -93,7 +93,7 @@ const FoodCardComponent: FC<FoodCardProps> = ({
           </div>
 
           <div className="mt-0.5">
-            <Heart size={15} strokeWidth={3}/>
+            <Heart size={15} strokeWidth={3} className="text-black"/>
           </div>
         </div>
 

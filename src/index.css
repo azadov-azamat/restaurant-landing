@@ -35,6 +35,7 @@
 
 @theme {
   --font-gilroy: "Gilroy", sans-serif;
+  --color-primary-gray: #626464;
 }
 
 @layer components {
