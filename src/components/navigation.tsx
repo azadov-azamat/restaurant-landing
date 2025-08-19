@@ -40,7 +40,7 @@ export default function Navigation({
               >
                 <Image
                   src="/images/logo.png"
-                  className="w-[212px] -ml-8"
+                  className="md:w-56 w-48 -ml-8"
                   alt="navigation-logo-background"
                 />
               </Link>
