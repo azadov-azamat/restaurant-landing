@@ -4,6 +4,7 @@ import NewsSlider from "../../components/slider/news";
 import { motion } from "framer-motion"
 import { Button } from "../../components/custom/button";
 import Breadcrumb from "../../components/breadcrumb";
+import TeamMember from "../../components/card/team";
 
 function About() {
 
@@ -124,6 +125,7 @@ function About() {
               </motion.div>
         </div>
        </div>
+       <TeamSection/>
         {/* <div>
           <Image
               src="/images/leaf/1.png"
@@ -146,6 +148,74 @@ function About() {
       <NewsSlider />
     </main>
 
+  )
+}
+
+  const defaultMembers = [
+    {
+      id: 1,
+      name: "Александр Петро",
+      role: "главный повар",
+      image: "/placeholder.svg",
+    },
+    {
+      id: 2,
+      name: "Александр Петро",
+      role: "помощник повара",
+      image: "/placeholder.svg",
+    },
+    {
+      id: 3,
+      name: "Александр Петро",
+      role: "бургер кинг",
+      image: "/placeholder.svg",
+    },
+    {
+      id: 4,
+      name: "Жулия Виллиам",
+      role: "официантка",
+      image: "/placeholder.svg",
+    },
+    {
+      id: 5,
+      name: "Жулия Виллиам",
+      role: "официантка",
+      image: "/placeholder.svg",
+    },
+    {
+      id: 6,
+      name: "Жулия Виллиам",
+      role: "официантка",
+      image: "/placeholder.svg",
+    },
+  ]
+
+function TeamSection({ title = "Наша команда", members = defaultMembers }: any) {
+  return (
+    <section className="py-16 px-6">
+      <div className="container mx-auto max-w-6xl">
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-4xl font-bold text-black text-center mb-16"
+        >
+          {title}
+        </motion.h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 justify-items-center">
+          {members.map((member: any, index: number) => (
+            <TeamMember
+              key={member.id}
+              name={member.name}
+              role={member.role}
+              image={member.image}
+              delay={index * 0.1}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
   )
 }
 

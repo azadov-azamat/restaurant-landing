@@ -4,8 +4,10 @@ import { useKeenSlider } from "keen-slider/react";
 import { motion } from "framer-motion";
 import { Button } from "../custom/button";
 import { NewsCard } from "../card/news";
+import { useNavigate } from "react-router-dom";
 
 export default function NewsSlider() {
+    const navigate = useNavigate();
 
     const [sliderRef] = useKeenSlider<HTMLDivElement>({
       loop: true,
@@ -69,7 +71,10 @@ export default function NewsSlider() {
       </div>
 
         <div className="flex justify-end">
-          <Button showArrow variant="primary" size="md">
+          <Button
+              onClick={() => navigate('/news')} 
+              showArrow variant="primary" size="md"
+          >
               Посмотреть все
             </Button>
         </div>

@@ -2,6 +2,7 @@ import { Outlet } from "react-router-dom";
 import { NavbarWidget, FooterWidget } from "../widgets";
 import { useCallback, useMemo, useState } from "react";
 import Image from "../components/custom/image";
+import ScrollToTop from "../components/scroll-to-top";
 
 export default function RootLayout() {
    const [isLoaded, setIsLoaded] = useState(false);
@@ -46,9 +47,9 @@ export default function RootLayout() {
               className={bgImageClasses}
           />
         </div>
-
+        <ScrollToTop/>
         <main className="relative container ">
-          <Outlet />
+            <Outlet />
         </main>
       </div>
       <FooterWidget/>
