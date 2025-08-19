@@ -40,7 +40,7 @@
 
 @layer components {
   .container {
-    @apply mx-auto px-4;
+    @apply mx-auto md:px-4 p-0 px-2;
     max-width: 100%; /* default */
   }
 

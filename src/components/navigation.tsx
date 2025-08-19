@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
+import { motion, AnimatePresence } from "framer-motion";
 import Image from "./custom/image";
 
 interface NavLink {
@@ -25,8 +26,10 @@ export default function Navigation({
   const closeMenu = () => setIsOpen(false);
 
   return (
-    <>
-      <nav className={`w-full mt-8 bg-transparent text-black relative z-50 ${className}`}>
+    <div className="relative">
+      <nav
+        className={`w-full mt-8 bg-transparent text-black relative ${className}`}
+      >
         <div className="w-full">
           <div className="flex items-center relative justify-between h-16">
             {/* Logo */}
@@ -36,15 +39,15 @@ export default function Navigation({
                 className="font-bold text-3xl tracking-wider w-[210px]"
               >
                 <Image
-                    src="/images/logo.png"
-                    className="w-[212px] -ml-8"
-                    alt="navigation-logo-background"
+                  src="/images/logo.png"
+                  className="w-[212px] -ml-8"
+                  alt="navigation-logo-background"
                 />
               </Link>
             </div>
 
             {/* Desktop Navigation */}
-            <div className="hidden md:block -ml-8">
+            <div className="hidden lg:block -ml-8 z-10">
               <div className="flex items-baseline space-x-8">
                 {navLinks.map((link, index) => (
                   <Link
@@ -60,36 +63,36 @@ export default function Navigation({
               </div>
             </div>
 
-            <div className="hidden md:flex items-center space-x-4">
-                <Image
-                    src="/icons/favorite.png"
-                    width={34}
-                    alt="navigation-icon-favorite"
-                />
-                 <Image
-                    src="/icons/circle-basket.png"
-                    width={34}
-                    alt="navigation-icon-circle-basket"
-                />
+            <div className="hidden lg:flex items-center space-x-4">
+              <Image
+                src="/icons/favorite.png"
+                width={34}
+                alt="navigation-icon-favorite"
+              />
+              <Image
+                src="/icons/circle-basket.png"
+                width={34}
+                alt="navigation-icon-circle-basket"
+              />
             </div>
             {/* Mobile menu button */}
-            <div className="md:hidden flex items-center space-x-4">
-                <div className="flex items-center space-x-4">
-                    <Image
-                        src="/icons/favorite.png"
-                        width={34}
-                        alt="navigation-icon-favorite"
-                    />
-                    <Image
-                        src="/icons/circle-basket.png"
-                        width={34}
-                        alt="navigation-icon-circle-basket"
-                    />
-                </div>
+            <div className="lg:hidden flex items-center space-x-4">
+              <div className="flex items-center space-x-4 z-10">
+                <Image
+                  src="/icons/favorite.png"
+                  width={34}
+                  alt="navigation-icon-favorite"
+                />
+                <Image
+                  src="/icons/circle-basket.png"
+                  width={34}
+                  alt="navigation-icon-circle-basket"
+                />
+              </div>
 
               <button
                 onClick={toggleMenu}
-                className="text-black p-2 rounded-md transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50"
+                className="text-black z-20 p-2 rounded-md transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50"
                 aria-label="Toggle menu"
               >
                 {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -99,34 +102,48 @@ export default function Navigation({
         </div>
       </nav>
 
-      {/* Mobile menu overlay */}
-      {isOpen && (
-        <div className="fixed inset-0 z-40 md:hidden">
-          {/* Backdrop */}
-          <div
-            className="fixed inset-0 bg-black bg-opacity-50 transition-opacity duration-300"
-            onClick={closeMenu}
-          />
+      {/* Mobile menu overlay with framer-motion */}
+      <AnimatePresence>
+        {isOpen && (
+          <>
+            {/* Backdrop */}
+            <motion.div
+              key="backdrop"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="fixed inset-0 bg-white/50 backdrop-blur-[10px] z-10 rounded-3xl"
+              onClick={closeMenu}
+            />
 
-          {/* Mobile menu panel */}
-          <div className="fixed top-0 right-0 h-full w-64 bg-gray-900 shadow-xl transform transition-transform duration-300 ease-in-out">
-            <div className="flex flex-col pt-20 px-6 space-y-6">
-              {navLinks.map((link, index) => (
-                <Link
-                  key={index}
-                  to={link.href}
-                  onClick={closeMenu}
-                  className={`text-lg font-medium transition-colors duration-200 hover:text-red-400 py-2 ${
-                    link.href === pathname ? "text-red-400" : "text-white"
-                  }`}
-                >
-                  {link.label}
-                </Link>
-              ))}
-            </div>
-          </div>
-        </div>
-      )}
-    </>
+            {/* Mobile menu panel */}
+            <motion.div
+              key="panel"
+              initial={{ x: "100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "100%" }}
+              transition={{ type: "tween", duration: 0.3 }}
+              className="fixed top-0 right-0 h-full w-64 bg-white shadow-2xl z-10 rounded-tr-3xl rounded-br-3xl"
+            >
+              <div className="flex flex-col pt-20 px-6 space-y-6">
+                {navLinks.map((link, index) => (
+                  <Link
+                    key={index}
+                    to={link.href}
+                    onClick={closeMenu}
+                    className={`text-lg font-medium transition-colors duration-200 hover:text-red-400 py-2 ${
+                      link.href === pathname ? "text-red-400" : "text-black"
+                    }`}
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
+    </div>
   );
 }

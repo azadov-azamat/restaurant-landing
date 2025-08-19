@@ -13,8 +13,8 @@ const Navbar: React.FC = () => {
                 href="tel:+998907583833"
                 className="flex items-center gap-2 text-black transition-colors"
               >
-                <Phone className="w-5 h-5" />
-                <span className="tracking-wide text-sm sm:text-base">
+                <Phone className="w-5 h-5 stroke-1" />
+                <span className="tracking-wide text-sm sm:text-base lg:block hidden">
                   +998(90)75838333
                 </span>
               </a>
@@ -23,8 +23,8 @@ const Navbar: React.FC = () => {
                 href="mailto:info@bmgsoft.com"
                 className="flex items-center gap-2 text-text-black transition-colors"
               >
-                <Mail className="w-5 h-5" />
-                <span className="tracking-wide text-sm sm:text-base">
+                <Mail className="w-5 h-5 stroke-1" />
+                <span className="tracking-wide text-sm sm:text-base lg:block hidden">
                   info@bmgsoft.com
                 </span>
               </a>

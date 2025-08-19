@@ -23,10 +23,13 @@ export default function FoodSlider() {
       spacing: 15,
     },
     breakpoints: {
+      "(max-width: 1024px)": {
+        slides: { perView: 3, spacing: 40 },
+      },
       "(max-width: 768px)": {
         slides: { perView: 2, spacing: 10 },
       },
-      "(max-width: 480px)": {
+      "(max-width: 520px)": {
         slides: { perView: 1, spacing: 10 },
       },
     },
@@ -81,7 +84,7 @@ export default function FoodSlider() {
                         e.stopPropagation() || instanceRef.current?.prev()
                     }
                 disabled={currentSlide === 0}
-                className="absolute -left-12 top-1/2 -translate-y-1/2 z-20  p-3 rounded-full hover:scale-110 transition"
+                className="absolute md:-left-12 left-0 top-1/2 -translate-y-1/2 z-20  p-3 rounded-full hover:scale-110 transition"
             >
                 <ChevronLeft size={36}/>
             </button>
@@ -93,7 +96,7 @@ export default function FoodSlider() {
                         currentSlide ===
                         instanceRef.current.track.details.slides.length - 1
                     }
-                className="absolute -right-12 top-1/2 -translate-y-1/2 z-20 p-3 rounded-full hover:scale-110 transition"
+                className="absolute md:-right-12 right-0 top-1/2 -translate-y-1/2 z-20 p-3 rounded-full hover:scale-110 transition"
             >
                 <ChevronRight size={36}/>
             </button>

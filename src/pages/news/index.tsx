@@ -47,7 +47,7 @@ function News() {
           <Breadcrumb items={breadcrumbItems} />
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-32 space-y-24 text-black">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-32 space-y-24 text-black">
             {
                     [...reviewsData, ...reviewsData, ...reviewsData, ...reviewsData].map((food, index) => <NewsCard key={index} {...food} />)
             }
@@ -85,15 +85,13 @@ function News() {
           <h2 className="text-3xl md:text-4xl font-extrabold text-black text-center mb-12">
             Галерея
           </h2>
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-10 place-items-center items-stretch">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-6 gap-y-10 place-items-center items-stretch">
             {galleryItems.map((item) => (
               <div key={item.id}>
                 <Image
                   src={item.imageSrc}
                   alt="Preview"
-                  width={274}
-                  height={185}
-                  className="object-cover object-center rounded-3xl shadow-2xl"
+                  className="lg:w-[274px] w-full h-48 object-cover rounded-3xl"
                 />
               </div>
             ))}

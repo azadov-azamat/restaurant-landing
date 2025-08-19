@@ -57,7 +57,7 @@ const FoodCardComponent: FC<FoodCardProps> = ({
       animate="visible"
       whileHover="hover"
       transition={{ duration: 0.6 }}
-      className="relative w-[263px] z-10"
+      className="relative lg:w-[263px] w-full z-10"
     >
       {/* Food Image */}
       <motion.div
@@ -80,7 +80,7 @@ const FoodCardComponent: FC<FoodCardProps> = ({
       <div
         className="
           relative
-          w-[241px]
+          lg:w-[241px] w-full
           h-full
           pt-32 px-4 pb-4
           bg-white/50 backdrop-blur-[10px]

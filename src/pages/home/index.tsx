@@ -59,9 +59,9 @@ function App() {
   return (
     <main className="mt-8 mb-16 space-y-16">
       <HeaderCard>
-        <div className="flex flex-col md:flex-row items-center text-center md:text-start my-10">
-          <div className="md:w-1/2 w-full space-y-4">
-            <h1 className="md:w-2/3 w-full text-black font-medium text-4xl sm:text-6xl uppercase tracking-wide leading-tight">
+        <div className="flex flex-col lg:flex-row items-center text-center lg:text-start my-10">
+          <div className="lg:w-1/2 w-full space-y-4 mb-10 lg:mb-0">
+            <h1 className="lg:w-2/3 w-full text-black font-normal lg:font-semibold text-4xl sm:text-6xl uppercase tracking-wide leading-tight">
               Вкусная еда ждет тебя!
             </h1>
             <Button 
@@ -72,7 +72,7 @@ function App() {
             </Button>
           </div>
 
-          <div>
+          <div className="-mb-[16pc] lg:mb-0">
             <Image
               src="/images/luxury.png"
               alt="header-luxury"
@@ -80,7 +80,7 @@ function App() {
             />
           </div>
         </div>
-        <div>
+        <div className="lg:block hidden">
           <Image
               src="/images/leaf/1.png"
               alt="header-leaf-1"
@@ -99,22 +99,26 @@ function App() {
         </div>
       </HeaderCard>
       
-      <FoodSlider />
+      <div className="mt-[16pc] lg:mt-0">
+        <FoodSlider />
+      </div>
 
-      <div className="flex relative flex-col md:flex-row items-center text-center md:text-start mt-18">
-        <div>
-              <div className="mock-form w-[463px] h-[760px] rounded-3xl bg-white/50 backdrop-blur-[10px] flex flex-col justify-between p-6">
+      <div className="flex relative flex-col lg:flex-row items-center text-center lg:text-start mt-18 w-full">
+        <div className="w-full z-10">
+              <div className="mock-form md:w-[463px] w-full h-[760px] rounded-3xl bg-white/50 backdrop-blur-[10px] flex flex-col justify-between p-6">
 
               </div>
         </div>
-        <div className="">
+        <div className="z-0">
           <Image
             src="/images/pizza.png"
             alt="header-leaf-2"
-            className="absolute -top-24 -right-[70px] w-[840px]"
+            className="absolute lg:-top-24 top-10 -right-[70px] lg:w-[840px] w-[560px]"
           />
         </div>
+      </div>
 
+      <div className="lg:block hidden">
         <Image
           src="/images/leaf/7.png"
           alt="header-leaf-3"
@@ -128,8 +132,8 @@ function App() {
         />
       </div>
 
-       <section> 
-        <h2 className="text-3xl md:text-4xl font-extrabold text-black text-center mb-12">
+      <section> 
+        <h2 className="text-3xl lg:text-4xl font-extrabold text-black text-center mb-12">
           Почему именно мы?
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 space-x-8 space-y-16">

@@ -18,7 +18,7 @@ const NewsCardComponent: React.FC<NewsCardProps> = ({
 }) => {
   return (
     <div
-      className={`relative w-[360px]  rounded-3xl bg-white/50 backdrop-blur-[10px] p-5 ${className}`}
+      className={`relative xl:w-[360px] w-full rounded-3xl bg-white/50 backdrop-blur-[10px] p-5 ${className}`}
     >
       {/* Preview image */}
       <div className="absolute -top-20 left-4">
