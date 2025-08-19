@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import FeatureCard from "../../components/card/feature";
 import HeaderCard from "../../components/card/header"
 import { Button } from "../../components/custom/button"
@@ -6,6 +7,8 @@ import FoodSlider from "../../components/slider/food";
 import NewsSlider from "../../components/slider/news";
 
 function App() {
+
+  const navigate = useNavigate();
   
  const featuresData = [
     {
@@ -61,7 +64,10 @@ function App() {
             <h1 className="md:w-2/3 w-full text-black font-medium text-4xl sm:text-6xl uppercase tracking-wide leading-tight">
               Вкусная еда ждет тебя!
             </h1>
-            <Button showArrow variant="primary" size="md" className="mt-4">
+            <Button 
+                showArrow 
+                onClick={()=> navigate('/menu')}
+                variant="primary" size="md" className="mt-4">
               Посмотреть меню
             </Button>
           </div>

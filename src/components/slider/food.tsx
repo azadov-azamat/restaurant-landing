@@ -7,10 +7,13 @@ import { Button } from "../custom/button";
 import { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "../custom/image";
+import { useNavigate } from "react-router-dom";
 
 export default function FoodSlider() {
-    const [currentSlide, setCurrentSlide] = useState(0)
-    const [loaded, setLoaded] = useState(false)
+  const navigate = useNavigate();
+  
+  const [currentSlide, setCurrentSlide] = useState(0)
+  const [loaded, setLoaded] = useState(false)
 
   const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>({
     loop: true,
@@ -110,7 +113,11 @@ export default function FoodSlider() {
       </div>
 
         <div className="flex justify-end">
-          <Button showArrow variant="primary" size="md">
+          <Button 
+              showArrow 
+              onClick={()=> navigate('/menu')}
+              variant="primary" size="md"
+          >
               Посмотреть меню
             </Button>
         </div>

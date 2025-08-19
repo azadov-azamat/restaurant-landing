@@ -18,10 +18,10 @@ const NewsCardComponent: React.FC<NewsCardProps> = ({
 }) => {
   return (
     <div
-      className={`relative w-[360px]  rounded-3xl bg-white/50 backdrop-blur-[10px] p-4 ${className}`}
+      className={`relative w-[360px]  rounded-3xl bg-white/50 backdrop-blur-[10px] p-5 ${className}`}
     >
       {/* Preview image */}
-      <div className="absolute -top-20 left-8">
+      <div className="absolute -top-20 left-4">
         <Image
           src={imageSrc}
           alt="Preview"
@@ -30,8 +30,8 @@ const NewsCardComponent: React.FC<NewsCardProps> = ({
       </div>
 
       {/* Content */}
-      <div className="p-4 mt-16">
-        <p className="text-base leading-relaxed mb-4 line-clamp-4">
+      <div className="mt-16">
+        <p className="text-base font-normal leading-relaxed mb-4 line-clamp-4">
           {description}
         </p>
 
@@ -43,7 +43,7 @@ const NewsCardComponent: React.FC<NewsCardProps> = ({
               className="w-full h-full object-cover"
             />
           </div>
-          <span className="text-lg font-bold">{name}</span>
+          <span className="text-lg font-normal">{name}</span>
         </div>
       </div>
     </div>

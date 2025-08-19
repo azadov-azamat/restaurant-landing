@@ -1,7 +1,7 @@
-import { memo, useMemo, useCallback } from "react";
+import { memo, useMemo, useCallback, useState } from "react";
 import type { FC } from "react";
 import { Heart } from "lucide-react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import type { Variants } from "framer-motion";
 import Image from "../custom/image";
 
@@ -37,9 +37,21 @@ const FoodCardComponent: FC<FoodCardProps> = ({
   image,
   onAdd,
 }) => {
+  const [count, setCount] = useState(0);
+  const [liked, setLiked] = useState(false);
+
   const handleAdd = useCallback(() => {
+    setCount((prev) => prev + 1);
     onAdd?.();
   }, [onAdd]);
+
+  const handleIncrement = useCallback(() => {
+    setCount((prev) => prev + 1);
+  }, []);
+
+  const handleDecrement = useCallback(() => {
+    setCount((prev) => (prev > 0 ? prev - 1 : 0));
+  }, []);
 
   const imgSrc = useMemo(() => image || "/placeholder.svg", [image]);
 
@@ -50,7 +62,7 @@ const FoodCardComponent: FC<FoodCardProps> = ({
       animate="visible"
       whileHover="hover"
       transition={{ duration: 0.6 }}
-      className="relative w-[263px]"
+      className="relative w-[263px] z-10"
     >
       {/* Food Image */}
       <motion.div
@@ -83,21 +95,29 @@ const FoodCardComponent: FC<FoodCardProps> = ({
       >
         {/* Text Content */}
         <div className="flex items-start justify-between mb-2">
-            <div className="text-left text-black">
-              <h3 className="font-bold mb-1 text-xl leading-normal text-black">
-                {title}
-              </h3>
-              <p className="text-sm leading-normal font-normal text-black opacity-80">
-                {description}
-              </p>
+          <div className="text-left text-black">
+            <h3 className="font-bold mb-1 text-xl leading-normal text-black">
+              {title}
+            </h3>
+            <p className="text-sm leading-normal font-normal text-black opacity-80">
+              {description}
+            </p>
           </div>
 
           <div className="mt-0.5">
-            <Heart size={15} strokeWidth={3} className="text-black"/>
-          </div>
+  <button onClick={() => setLiked((prev) => !prev)}>
+    <Heart
+      size={18}
+      strokeWidth={2.5}
+      className={`transition-colors duration-300 ${
+        liked ? "text-red-500 fill-red-500" : "text-black"
+      }`}
+    />
+  </button>
+</div>
         </div>
 
-        {/* Price and Add Button */}
+        {/* Price and Add Button / Counter */}
         <div className="flex items-end justify-between">
           <div className="text-black">
             <span className="font-normal text-xl leading-normal text-black">
@@ -105,26 +125,43 @@ const FoodCardComponent: FC<FoodCardProps> = ({
             </span>
           </div>
 
-          <motion.button
-            variants={BUTTON_VARIANTS}
-            whileHover="hover"
-            whileTap="tap"
-            onClick={handleAdd}
-            className="
-              w-12 h-10
-              bg-black
-              rounded-lg
-              flex items-center justify-center
-              shadow-lg hover:shadow-xl
-              transition-shadow
-            "
-          >
-            <Image
-              src="/icons/basket.png"
-              alt="footer-logo-background"
-              width={23}
-            />
-          </motion.button>
+          <AnimatePresence mode="wait" initial={false}>
+            < motion.div
+              animate={{ width: count === 0 ? 48 : 120 }} // 🔥 width animatsiya
+              transition={{ duration: 0.3, ease: "easeInOut" }}
+              className="
+                h-10 bg-black rounded-lg flex items-center justify-center
+                shadow-lg overflow-hidden text-white
+              "
+            >
+              {count === 0 ? (
+                // basket icon
+                <button
+                  onClick={handleAdd}
+                  className="flex items-center justify-center w-full h-full"
+                >
+                  <Image src="/icons/basket.png" alt="basket" width={20} height={20} />
+                </button>
+              ) : (
+                // counter
+                <div className="flex items-center justify-between w-full px-2">
+                  <button
+                    onClick={handleDecrement}
+                    className="px-2 text-lg font-bold hover:text-red-400"
+                  >
+                    −
+                  </button>
+                  <span className="text-sm font-medium">{count}</span>
+                  <button
+                    onClick={handleIncrement}
+                    className="px-2 text-lg font-bold hover:text-green-400"
+                  >
+                    +
+                  </button>
+                </div>
+              )}
+            </motion.div>
+          </AnimatePresence>
         </div>
       </div>
     </motion.div>
