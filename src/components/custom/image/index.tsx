@@ -15,7 +15,7 @@ const Image = (props: LazyLoadImageProps) => {
       .join(" ");
 
     return (
-      <div className={wrapperClasses}>
+      <div className={wrapperClasses  + ' -z-10'}>
         <LazyLoadImage
           {...rest}
           loading={props.loading || "lazy"}

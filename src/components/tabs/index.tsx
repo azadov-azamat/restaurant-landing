@@ -16,7 +16,7 @@ const TabNavigation: React.FC<TabProps> = ({ tabs, defaultTab = 0, onChange }) =
   };
 
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center z-10">
       <div className="relative inline-flex rounded-full bg-white/30 backdrop-blur-[5px] px-6 h-[52px] py-2 ">
         {tabs.map((tab, index) => (
           <button

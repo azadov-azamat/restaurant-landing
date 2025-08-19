@@ -58,7 +58,7 @@ function Menu() {
           {
             [...foodData, ...foodData, ...foodData, ...foodData].map((food, index) => <FoodCard key={index} {...food} />)
           }
-          <div></div>
+          <div className="absolute -z-10"></div>
         </div>
 
         <div>

@@ -25,11 +25,6 @@ const IMAGE_VARIANTS: Variants = {
   hover: { scale: 1.05 },
 };
 
-const BUTTON_VARIANTS: Variants = {
-  hover: { scale: 1.1 },
-  tap: { scale: 0.95 },
-};
-
 const FoodCardComponent: FC<FoodCardProps> = ({
   title,
   description,

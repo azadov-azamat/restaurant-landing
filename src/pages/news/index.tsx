@@ -51,7 +51,7 @@ function News() {
             {
                     [...reviewsData, ...reviewsData, ...reviewsData, ...reviewsData].map((food, index) => <NewsCard key={index} {...food} />)
             }
-            <div></div>
+            <div className="absolute -z-10"></div>
         </div>
 
         <div>
@@ -77,7 +77,7 @@ function News() {
             />
         </div>
 
-        <div className="my-12 flex justify-center">
+        <div className="mb-12 flex justify-center">
             <Pagination currentPage={2} totalPages={5} onPageChange={() => {}} />
         </div>
 
