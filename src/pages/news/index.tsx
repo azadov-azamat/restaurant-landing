@@ -1,6 +1,7 @@
 import Breadcrumb from "../../components/breadcrumb";
 import HeaderCard from "../../components/card/header"
 import { NewsCard } from "../../components/card/news";
+import Image from "../../components/custom/image";
 import Pagination from "../../components/pagination";
 
 function News() {
@@ -54,29 +55,25 @@ function News() {
         </div>
 
         <div>
-            <img
+            <Image
               src="/images/menu-leaf/1.png"
               alt="menu-header-leaf-1"
               className="w-[252px] absolute -right-[70px] top-[8pc]"
-              loading="lazy"
             />
-            <img
+            <Image
               src="/images/menu-leaf/2.png"
               alt="menu-header-leaf-2"
               className="w-[170px] absolute top-[23pc] -left-[4pc]"
-              loading="lazy"
             />
-            <img
+            <Image
               src="/images/menu-leaf/4.png"
               alt="menu-header-leaf-4"
               className="w-60 absolute bottom-[40pc] -left-[4pc]"
-              loading="lazy"
             />
-            <img
+            <Image
               src="/images/menu-leaf/5.png"
               alt="menu-header-leaf-5"
               className="w-60 absolute bottom-[40pc] -right-[70px]"
-              loading="lazy"
             />
         </div>
 
@@ -91,12 +88,11 @@ function News() {
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-10 place-items-center items-stretch">
             {galleryItems.map((item) => (
               <div key={item.id}>
-                <img
+                <Image
                   src={item.imageSrc}
                   alt="Preview"
                   width={274}
                   height={185}
-                  loading="lazy"
                   className="object-cover object-center rounded-3xl shadow-2xl"
                 />
               </div>

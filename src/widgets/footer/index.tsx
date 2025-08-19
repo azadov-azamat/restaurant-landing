@@ -1,4 +1,5 @@
 import { memo, useMemo } from "react";
+import Image from "../../components/custom/image";
 
 // Constants
 
@@ -52,23 +53,21 @@ const FooterSection = memo(({ title, items }: { title: string; items: FooterItem
 const LogoAndSocials = memo(() => (
   <div className="space-y-4">
     <div className="w-40">
-      <img
+      <Image
           src="/images/logo.png"
           alt="footer-logo-background"
           className="w-[212px] -ml-8"
-          loading="lazy"
       />
     </div>
     <div className="flex space-x-4">
       {socialLinks.map((link, idx) => (
         <a key={idx} href={link.href} aria-label={link.label}>
-          <img
+          <Image
             src={link.icon}
             alt={link.label}
             width={24}
             height={24}
             className="h-6 w-6"
-            loading="lazy"
           />
         </a>
       ))}
@@ -88,7 +87,7 @@ export default function Footer() {
       <div className={overlayStyle} />
       {/* Background Image */}
       <div className="absolute inset-0 -z-10">
-        <img
+        <Image
           src="/images/footer.png"
           alt="footer-background"
           className="w-full h-full object-cover object-center transition-opacity duration-500 opacity-100"

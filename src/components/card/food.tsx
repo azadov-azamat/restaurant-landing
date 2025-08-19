@@ -3,6 +3,7 @@ import type { FC } from "react";
 import { Heart } from "lucide-react";
 import { motion } from "framer-motion";
 import type { Variants } from "framer-motion";
+import Image from "../custom/image";
 
 // Types
 interface FoodCardProps {
@@ -58,13 +59,12 @@ const FoodCardComponent: FC<FoodCardProps> = ({
         className="absolute -top-20 left-1/2 transform -translate-x-[54%] z-10"
       >
         <div className="w-56 h-52 rounded-full overflow-hidden">
-          <img
+          <Image
             src={imgSrc}
             alt={title}
             className="w-full h-full object-cover"
             width={220}
             height={210}
-            loading="lazy"
           />
         </div>
       </motion.div>
@@ -119,11 +119,10 @@ const FoodCardComponent: FC<FoodCardProps> = ({
               transition-shadow
             "
           >
-            <img
+            <Image
               src="/icons/basket.png"
               alt="footer-logo-background"
               width={23}
-              loading="lazy"
             />
           </motion.button>
         </div>

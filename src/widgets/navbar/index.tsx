@@ -1,5 +1,6 @@
 import React from "react";
 import { Phone, Mail, ChevronDown } from "lucide-react";
+import Image from "../../components/custom/image";
 
 const Navbar: React.FC = () => {
   return (
@@ -42,7 +43,7 @@ const Navbar: React.FC = () => {
               <button
                 className="inline-flex h-9 w-9 items-center justify-center overflow-hidden rounded-full ring-2 ring-white/20 hover:ring-white/40 transition"
               >
-                <img
+                <Image
                   src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=200&auto=format&fit=crop"
                   alt="User avatar"
                   className="h-full w-full object-cover"

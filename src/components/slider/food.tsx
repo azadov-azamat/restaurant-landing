@@ -6,6 +6,7 @@ import { FoodCard } from "../card/food";
 import { Button } from "../custom/button";
 import { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import Image from "../custom/image";
 
 export default function FoodSlider() {
     const [currentSlide, setCurrentSlide] = useState(0)
@@ -115,18 +116,16 @@ export default function FoodSlider() {
         </div>
 
         <div>
-            <img
+            <Image
               src="/images/leaf/5.png"
               alt="food-slider-leaf-5"
               className="w-[130px] absolute -bottom-2 -left-[70px]"
-              loading="lazy"
             />
 
-            <img
+            <Image
               src="/images/leaf/6.png"
               alt="food-slider-leaf-5"
               className="w-[230px] absolute -top-5 -right-[70px]"
-              loading="lazy"
             />
         </div>
     </div>

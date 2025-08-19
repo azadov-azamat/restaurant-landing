@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
+import Image from "./custom/image";
 
 interface NavLink {
   label: string;
@@ -34,11 +35,10 @@ export default function Navigation({
                 to="/"
                 className="font-bold text-3xl tracking-wider w-[210px]"
               >
-                <img
+                <Image
                     src="/images/logo.png"
                     className="w-[212px] -ml-8"
                     alt="navigation-logo-background"
-                    loading="lazy"
                 />
               </Link>
             </div>
@@ -61,33 +61,29 @@ export default function Navigation({
             </div>
 
             <div className="hidden md:flex items-center space-x-4">
-                <img
+                <Image
                     src="/icons/favorite.png"
                     width={34}
-                    alt="footer-logo-background"
-                    loading="lazy"
+                    alt="navigation-icon-favorite"
                 />
-                 <img
+                 <Image
                     src="/icons/circle-basket.png"
                     width={34}
-                    alt="footer-logo-background"
-                    loading="lazy"
+                    alt="navigation-icon-circle-basket"
                 />
             </div>
             {/* Mobile menu button */}
             <div className="md:hidden flex items-center space-x-4">
                 <div className="flex items-center space-x-4">
-                    <img
+                    <Image
                         src="/icons/favorite.png"
                         width={34}
-                        alt="footer-logo-background"
-                        loading="lazy"
+                        alt="navigation-icon-favorite"
                     />
-                      <img
+                    <Image
                         src="/icons/circle-basket.png"
                         width={34}
-                        alt="footer-logo-background"
-                        loading="lazy"
+                        alt="navigation-icon-circle-basket"
                     />
                 </div>
 

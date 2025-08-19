@@ -1,4 +1,5 @@
 import { useCallback, useMemo, useState } from "react";
+import Image from "./custom/image";
 
 export default function LoadingPage() {
    const [isLoaded, setIsLoaded] = useState(false);
@@ -30,18 +31,16 @@ export default function LoadingPage() {
 
       <div className="relative container overflow-hidden ">
         <div className="absolute inset-0 -z-10">
-          <img
+          <Image
             src="/images/main.jpg"
             alt="Background"
             onLoad={handleLoad}
             className={bgImageClasses}
-            loading="lazy"
           />
-          <img
+          <Image
               src="/images/main-2.jpg"
               alt="Background 2"
               className={bgImageClasses}
-              loading="lazy"
           />
         </div>
         <main>

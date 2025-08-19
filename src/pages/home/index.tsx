@@ -1,6 +1,7 @@
 import FeatureCard from "../../components/card/feature";
 import HeaderCard from "../../components/card/header"
 import { Button } from "../../components/custom/button"
+import Image from "../../components/custom/image";
 import FoodSlider from "../../components/slider/food";
 import NewsSlider from "../../components/slider/news";
 
@@ -66,7 +67,7 @@ function App() {
           </div>
 
           <div>
-            <img
+            <Image
               src="/images/luxury.png"
               alt="header-luxury"
               loading="eager"
@@ -74,24 +75,21 @@ function App() {
           </div>
         </div>
         <div>
-          <img
+          <Image
               src="/images/leaf/1.png"
               alt="header-leaf-1"
               className="w-[510px] absolute top-[3pc] left-[15pc]"
-              loading="lazy"
             />
-            <img
+          <Image
               src="/images/leaf/3.png"
               alt="header-leaf-3"
               className="w-[260px] absolute bottom-[10pc] right-[-3pc]"
-              loading="lazy"
-            />
-            <img
+          />
+          <Image
               src="/images/leaf/4.png"
               alt="header-leaf-4"
               className="w-60 absolute top-[68px] -left-[70px]"
-              loading="lazy"
-            />
+          />
         </div>
       </HeaderCard>
       
@@ -104,26 +102,23 @@ function App() {
               </div>
         </div>
         <div className="">
-          <img
+          <Image
             src="/images/pizza.png"
             alt="header-leaf-2"
             className="absolute -top-24 -right-[70px] w-[840px]"
-            loading="lazy"
           />
         </div>
 
-        <img
+        <Image
           src="/images/leaf/7.png"
           alt="header-leaf-3"
           className="w-[430px] absolute -top-[12pc] left-[28pc]"
-          loading="lazy"
         />
 
-        <img
+        <Image
           src="/images/leaf/8.png"
           alt="header-leaf-3"
           className="w-[430px] absolute -bottom-[8pc] right-[18pc]"
-          loading="lazy"
         />
       </div>
 

@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "../custom/image";
 
 type NewsCardProps = {
   imageSrc: string;
@@ -21,11 +22,10 @@ const NewsCardComponent: React.FC<NewsCardProps> = ({
     >
       {/* Preview image */}
       <div className="absolute -top-20 left-8">
-        <img
+        <Image
           src={imageSrc}
           alt="Preview"
           className="w-[213px] h-[156px] object-cover object-center rounded-3xl shadow-2xl"
-          loading="lazy"
         />
       </div>
 
@@ -37,11 +37,10 @@ const NewsCardComponent: React.FC<NewsCardProps> = ({
 
         <div className="flex items-center gap-3">
           <div className="relative w-11 h-11 rounded-full overflow-hidden">
-            <img
+            <Image
               src={avatarSrc}
               alt="Avatar"
               className="w-full h-full object-cover"
-              loading="lazy"
             />
           </div>
           <span className="text-lg font-bold">{name}</span>

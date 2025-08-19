@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom";
 import { NavbarWidget, FooterWidget } from "../widgets";
 import { useCallback, useMemo, useState } from "react";
+import Image from "../components/custom/image";
 
 export default function RootLayout() {
    const [isLoaded, setIsLoaded] = useState(false);
@@ -33,18 +34,16 @@ export default function RootLayout() {
       <div className="relative container overflow-hidden ">
         <NavbarWidget />
         <div className="absolute inset-0 -z-10">
-          <img
+          <Image
             src="/images/main.jpg"
             alt="Background"
             onLoad={handleLoad}
             className={bgImageClasses}
-            loading="lazy"
           />
-          <img
+          <Image
               src="/images/main-2.jpg"
               alt="Background 2"
               className={bgImageClasses}
-              loading="lazy"
           />
         </div>
 
