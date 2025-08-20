@@ -24,7 +24,7 @@ function Contacts() {
             </h2>
         </div> */}
         <ContactForm/>
-        <div>
+        {/* <div>
           <Image
               src="/images/leaf/1.png"
               alt="header-leaf-1"
@@ -40,7 +40,7 @@ function Contacts() {
               alt="header-leaf-4"
               className="w-60 absolute top-[68px] -left-[70px]"
             />
-        </div>
+        </div> */}
       </HeaderCard>
     
       <NewsSlider />
