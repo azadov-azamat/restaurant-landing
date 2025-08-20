@@ -1,6 +1,5 @@
 import Breadcrumb from "../../components/breadcrumb";
 import HeaderCard from "../../components/card/header"
-import Image from "../../components/custom/image";
 import ContactForm from "../../components/form/contact";
 import NewsSlider from "../../components/slider/news";
 
