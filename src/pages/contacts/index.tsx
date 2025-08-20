@@ -1,11 +1,21 @@
+import Breadcrumb from "../../components/breadcrumb";
 import HeaderCard from "../../components/card/header"
 import Image from "../../components/custom/image";
 import NewsSlider from "../../components/slider/news";
 
 function Contacts() {
+
+  const breadcrumbItems = [
+    { label: "Главная", href: "/" },
+    { label: "Связаться с нами" }
+  ];
+
   return (
     <main className="mt-8 mb-16 space-y-16">
       <HeaderCard>
+        <div className="flex flex-col lg:flex-row items-center justify-between my-10">
+          <Breadcrumb items={breadcrumbItems} />
+        </div>
 
         <div>
           <Image

@@ -43,7 +43,7 @@ function News() {
   return (
     <main className="mt-8 mb-16 space-y-16">
       <HeaderCard>
-        <div className="flex  items-center justify-between my-10">
+        <div className="flex flex-col lg:flex-row items-center justify-between my-10">
           <Breadcrumb items={breadcrumbItems} />
         </div>
 

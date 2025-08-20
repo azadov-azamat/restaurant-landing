@@ -46,7 +46,7 @@ function Menu() {
   return (
     <main className="mt-8 mb-16 space-y-16">
       <HeaderCard>
-        <div className="flex  items-center justify-between my-10">
+        <div className="flex flex-col lg:flex-row  items-center justify-between md:my-10 my-5 space-y-4">
             <Breadcrumb items={breadcrumbItems} />
             <TabNavigation
               tabs={["Блюда", "Салаты", "Напитки", "Фаст-Фуд"]}
