@@ -83,15 +83,15 @@ export default function Footer() {
   );
 
   return (
-    <footer className="z-10 text-black relative md:h-[314px] md:p-0 py-4 h-auto flex items-center justify-center">
+    <footer className="z-10 text-black relative md:h-[314px] md:p-0 py-4 h-auto flex items-center justify-center overflow-hidden">
       <div className={overlayStyle} />
       {/* Background Image */}
       <div className="absolute inset-0 -z-10">
-        <Image
+        <img
           src="/images/footer.png"
           alt="footer-background"
-          className="w-full h-full object-cover object-center transition-opacity duration-500 opacity-100"
-          loading="eager"
+          className="w-full h-full object-cover"
+          loading="lazy"
         />
       </div>
 

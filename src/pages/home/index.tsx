@@ -5,6 +5,7 @@ import { Button } from "../../components/custom/button"
 import Image from "../../components/custom/image";
 import FoodSlider from "../../components/slider/food";
 import NewsSlider from "../../components/slider/news";
+import OrderForm from "../../components/form/order";
 
 function App() {
 
@@ -105,9 +106,9 @@ function App() {
 
       <div className="flex relative flex-col lg:flex-row items-center text-center lg:text-start mt-18 w-full">
         <div className="w-full z-10">
-              <div className="mock-form md:w-[463px] w-full h-[760px] rounded-3xl bg-white/50 backdrop-blur-[10px] flex flex-col justify-between p-6">
-
-              </div>
+            {/* <div className="mock-form md:w-[463px] w-full  rounded-3xl bg-white/50 backdrop-blur-[10px] flex flex-col justify-between p-6"> */}
+              <OrderForm/>
+            {/* </div> */}
         </div>
         <div className="z-0">
           <Image

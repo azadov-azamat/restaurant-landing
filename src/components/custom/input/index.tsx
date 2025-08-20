@@ -35,7 +35,7 @@ const InputField = forwardRef<HTMLInputElement, InputFieldProps>(
     return (
       <div className={`relative w-full pt-6 ${className}`}>
         <label
-          className={`absolute left-0 transition-all duration-200 pointer-events-none text-dark-gray 
+          className={`absolute left-0 transition-all duration-200 pointer-events-none text-[#585858]
             ${isFocused || hasValue ? "top-0 text-sm" : "top-6 text-base"}
 
             ${error && "text-primary-red"}
@@ -57,7 +57,7 @@ const InputField = forwardRef<HTMLInputElement, InputFieldProps>(
           onChange={handleChange}
           {...props}
         />
-        {error && <p className="mt-1 text-sm text-red-500">{error}</p>}
+        {error && <p className="mt-1 text-sm text-start text-red-500">{error}</p>}
       </div>
     )
   },

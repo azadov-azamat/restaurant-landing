@@ -11,7 +11,7 @@ const Image = (props: LazyLoadImageProps) => {
     const wrapperClasses = className;
     const imgClasses = className
       .split(" ")
-      .filter((cls) => !cls.includes("absolute") && !cls.startsWith("top-") && !cls.startsWith("right-") && !cls.startsWith("left-") && !cls.startsWith("bottom-")) // faqat positioning classlarni olib tashlaymiz
+      .filter((cls) => !cls.includes("absolute")) // faqat positioning classlarni olib tashlaymiz
       .join(" ");
 
     return (

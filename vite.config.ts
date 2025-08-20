@@ -20,7 +20,7 @@ export default defineConfig({
     }
   },
   optimizeDeps: {
-    include: [ "react", "react-dom", "react-router-dom", "axios", "framer-motion", "aos", "jwt-decode", "react-hook-form" ],
+    include: [ "react", "react-dom", "react-router-dom", "axios", "framer-motion", "react-hook-form", "react-lazy-load-image-component", "lucide-react", "keen-slider" ],
     exclude: [],
   }
 })
