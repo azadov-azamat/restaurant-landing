@@ -65,7 +65,7 @@ function Menu() {
           <Image
               src="/images/menu-leaf/1.png"
               alt="menu-header-leaf-1"
-              className="w-[252px] absolute -right-[70px] top-[8pc]"
+              className="w-[252px] absolute -right-[70px] top-[8pc] "
             />
             <Image
               src="/images/menu-leaf/2.png"

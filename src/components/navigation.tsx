@@ -47,7 +47,7 @@ export default function Navigation({
             </div>
 
             {/* Desktop Navigation */}
-            <div className="hidden lg:block -ml-8 z-10">
+            <div className="hidden lg:block -ml-8 z-20">
               <div className="flex items-baseline space-x-8">
                 {navLinks.map((link, index) => (
                   <Link
@@ -77,7 +77,7 @@ export default function Navigation({
             </div>
             {/* Mobile menu button */}
             <div className="lg:hidden flex items-center space-x-4">
-              <div className="flex items-center space-x-4 z-10">
+              <div className="flex items-center space-x-4 z-20">
                 <Image
                   src="/icons/favorite.png"
                   width={34}
@@ -92,7 +92,7 @@ export default function Navigation({
 
               <button
                 onClick={toggleMenu}
-                className="text-black z-20 p-2 rounded-md transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50"
+                className="text-black z-30 p-2 rounded-md transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50"
                 aria-label="Toggle menu"
               >
                 {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -113,7 +113,7 @@ export default function Navigation({
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.3 }}
-              className="fixed inset-0 bg-white/50 backdrop-blur-[10px] z-10 rounded-3xl"
+              className="fixed inset-0 bg-white/50 backdrop-blur-[10px] z-20 rounded-3xl"
               onClick={closeMenu}
             />
 
@@ -124,7 +124,7 @@ export default function Navigation({
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "tween", duration: 0.3 }}
-              className="fixed top-0 right-0 h-full w-64 bg-white shadow-2xl z-10 rounded-tr-3xl rounded-br-3xl"
+              className="fixed top-0 right-0 h-full w-64 bg-white shadow-2xl z-20 rounded-tr-3xl rounded-br-3xl"
             >
               <div className="flex flex-col pt-20 px-6 space-y-6">
                 {navLinks.map((link, index) => (
