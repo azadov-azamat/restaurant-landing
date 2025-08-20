@@ -1,7 +1,4 @@
-"use client"
-
 import type React from "react"
-
 import { forwardRef, type InputHTMLAttributes, useState, useEffect } from "react"
 
 export interface InputFieldProps extends InputHTMLAttributes<HTMLInputElement> {

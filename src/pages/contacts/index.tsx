@@ -1,6 +1,7 @@
 import Breadcrumb from "../../components/breadcrumb";
 import HeaderCard from "../../components/card/header"
 import Image from "../../components/custom/image";
+import ContactForm from "../../components/form/contact";
 import NewsSlider from "../../components/slider/news";
 
 function Contacts() {
@@ -17,6 +18,12 @@ function Contacts() {
           <Breadcrumb items={breadcrumbItems} />
         </div>
 
+        {/* <div className="space-y-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-center ">
+                        Наша еда
+            </h2>
+        </div> */}
+        <ContactForm/>
         <div>
           <Image
               src="/images/leaf/1.png"

@@ -78,7 +78,7 @@ export default function OrderForm() {
                 disabled={mutation.isPending}
                 className="w-full mt-8"
             >
-                {mutation.isPending ? "Yuborilmoqda..." : "Забронировать"}
+                {mutation.isPending ? "Отправка..." : "Забронировать"}
             </Button>
         </form>
     </div>
