@@ -88,7 +88,7 @@ export default function Footer() {
       {/* Background Image */}
       <div className="absolute inset-0 -z-10">
         <img
-          src="/images/footer.png"
+          src="/images/footer.webp"
           alt="footer-background"
           className="w-full h-full object-cover"
           loading="lazy"

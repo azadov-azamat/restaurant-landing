@@ -32,13 +32,13 @@ export default function LoadingPage() {
       <div className="relative container overflow-hidden ">
         <div className="absolute inset-0 -z-10">
           <Image
-            src="/images/main.jpg"
+            src="/images/main.webp"
             alt="Background"
             onLoad={handleLoad}
             className={bgImageClasses}
           />
           <Image
-              src="/images/main-2.jpg"
+              src="/images/main-2.webp"
               alt="Background 2"
               className={bgImageClasses}
           />

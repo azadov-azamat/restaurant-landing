@@ -33,7 +33,7 @@ const CircularImage = memo(function CircularImage({
           rounded-full 
           bg-transparent 
           border 
-          border-gray-300 
+          border-black 
           shadow-sm
           flex 
           items-center 
@@ -70,9 +70,9 @@ const CircularImage = memo(function CircularImage({
       {(name || position) && (
         <div className="mt-3 text-center">
           {name && (
-            <h3 className="text-lg font-semibold text-white mb-1">{name}</h3>
+            <h3 className="text-xl font-semibold text-black mb-1">{name}</h3>
           )}
-          {position && <p className="text-sm text-gray-300">{position}</p>}
+          {position && <p className="text-lg text-[#464646]">{position}</p>}
         </div>
       )}
     </div>

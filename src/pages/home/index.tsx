@@ -75,7 +75,7 @@ function App() {
 
           <div className="-mb-[16pc] lg:mb-0">
             <Image
-              src="/images/luxury.png"
+              src="/images/luxury.webp"
               alt="header-luxury"
               loading="eager"
             />
@@ -112,7 +112,7 @@ function App() {
         </div>
         <div className="z-0">
           <Image
-            src="/images/pizza.png"
+            src="/images/pizza.webp"
             alt="header-leaf-2"
             className="absolute lg:-top-24 top-10 -right-[70px] lg:w-[840px] w-[560px]"
           />
