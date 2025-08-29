@@ -130,12 +130,14 @@ export default function FoodSlider() {
               src="/images/leaf/5.png"
               alt="food-slider-leaf-5"
               className="w-[130px] absolute -bottom-2 -left-[70px]"
+              priority
             />
 
             <Image
               src="/images/leaf/6.png"
               alt="food-slider-leaf-5"
               className="w-[230px] absolute -top-5 -right-[70px]"
+              priority
             />
         </div>
     </div>

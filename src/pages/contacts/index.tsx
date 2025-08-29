@@ -1,5 +1,6 @@
 import Breadcrumb from "../../components/breadcrumb";
 import HeaderCard from "../../components/card/header"
+import Image from "../../components/custom/image";
 import ContactForm from "../../components/form/contact";
 import NewsSlider from "../../components/slider/news";
 
@@ -70,7 +71,7 @@ function Contacts() {
               key={idx}
               className="flex flex-col items-center text-center cursor-pointer"
             >
-              <img src={card.icon} alt={card.title} className="w-12 h-12" />
+              <Image src={card.icon} alt={card.title} className="w-12 h-12" />
               <h3 className="font-bold text-black text-2xl mt-4">{card.title}</h3>
               <div className="flex flex-col space-y-1">
                 {card.items.map((item, i) => (

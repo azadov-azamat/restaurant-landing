@@ -39,6 +39,8 @@ export default function RootLayout() {
             src="/images/main.webp"
             alt="Background"
             onLoad={handleLoad}
+            // srcSet="main-824.webp 824w, main-1440.webp 1440w" 
+            // sizes="(max-width: 768px) 824px, 1440px" 
             visibleByDefault={isLoaded}
             className={bgImageClasses}
           />
@@ -46,6 +48,8 @@ export default function RootLayout() {
               src="/images/main-2.webp"
               alt="Background 2"
               className={bgImageClasses}
+              // srcSet="main-824.webp 824w, main-1440.webp 1440w" 
+              // sizes="(max-width: 768px) 824px, 1440px" 
           />
         </div>
         <ScrollToTop/>

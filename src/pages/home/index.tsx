@@ -77,7 +77,7 @@ function App() {
             <Image
               src="/images/luxury.webp"
               alt="header-luxury"
-              loading="eager"
+              priority
             />
           </div>
         </div>
@@ -86,16 +86,19 @@ function App() {
               src="/images/leaf/1.png"
               alt="header-leaf-1"
               className="w-[510px] absolute top-[3pc] left-[15pc]"
+              priority
             />
           <Image
               src="/images/leaf/3.png"
               alt="header-leaf-3"
               className="w-[260px] absolute bottom-[10pc] right-[-3pc]"
+              priority
           />
           <Image
               src="/images/leaf/4.png"
               alt="header-leaf-4"
               className="w-60 absolute top-[68px] -left-[70px]"
+              priority
           />
         </div>
       </HeaderCard>
@@ -113,24 +116,27 @@ function App() {
         <div className="z-0">
           <Image
             src="/images/pizza.webp"
-            alt="header-leaf-2"
+            alt="header-pizza"
             className="absolute lg:-top-24 top-10 -right-[70px] lg:w-[840px] w-[560px]"
+            priority
           />
         </div>
-      </div>
 
-      <div className="lg:block hidden">
-        <Image
-          src="/images/leaf/7.png"
-          alt="header-leaf-3"
-          className="w-[430px] absolute -top-[12pc] left-[28pc]"
-        />
+        <div className="lg:block hidden">
+          <Image
+            src="/images/leaf/7.png"
+            alt="header-leaf-7"
+            className="w-[430px] absolute -top-[12pc] left-[28pc]"
+            priority
+          />
 
-        <Image
-          src="/images/leaf/8.png"
-          alt="header-leaf-3"
-          className="w-[430px] absolute -bottom-[8pc] right-[18pc]"
-        />
+          <Image
+            src="/images/leaf/8.png"
+            alt="header-leaf-8"
+            className="w-[430px] absolute -bottom-[8pc] right-[18pc]"
+            priority
+          />
+        </div>
       </div>
 
       <section> 

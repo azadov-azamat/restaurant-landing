@@ -59,21 +59,25 @@ function News() {
               src="/images/menu-leaf/1.png"
               alt="menu-header-leaf-1"
               className="w-[252px] absolute -right-[70px] top-[8pc]"
+              priority
             />
             <Image
               src="/images/menu-leaf/2.png"
               alt="menu-header-leaf-2"
               className="w-[170px] absolute top-[23pc] -left-[4pc]"
+              priority
             />
             <Image
               src="/images/menu-leaf/4.png"
               alt="menu-header-leaf-4"
               className="w-60 absolute bottom-[40pc] -left-[4pc]"
+              priority
             />
             <Image
               src="/images/menu-leaf/5.png"
               alt="menu-header-leaf-5"
               className="w-60 absolute bottom-[40pc] -right-[70px]"
+              priority
             />
         </div>
 

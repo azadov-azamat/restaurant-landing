@@ -66,26 +66,31 @@ function Menu() {
               src="/images/menu-leaf/1.png"
               alt="menu-header-leaf-1"
               className="w-[252px] absolute -right-[70px] top-[8pc] "
+              priority
             />
             <Image
               src="/images/menu-leaf/2.png"
               alt="menu-header-leaf-2"
               className="w-[170px] absolute top-[23pc] -left-[4pc]"
+              priority
             />
             <Image
               src="/images/menu-leaf/3.png"
               alt="menu-header-leaf-3"
               className="w-60 absolute top-1/2 left-[40%]"
+              priority
             />
             <Image
               src="/images/menu-leaf/4.png"
               alt="menu-header-leaf-4"
               className="w-60 absolute bottom-[10pc] -left-[4pc]"
+              priority
             />
             <Image
               src="/images/menu-leaf/5.png"
               alt="menu-header-leaf-5"
               className="w-60 absolute bottom-[10pc] -right-[70px]"
+              priority
             />
         </div>
       </HeaderCard>

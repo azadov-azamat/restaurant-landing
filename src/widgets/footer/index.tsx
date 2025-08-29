@@ -87,11 +87,11 @@ export default function Footer() {
       <div className={overlayStyle} />
       {/* Background Image */}
       <div className="absolute inset-0 -z-10">
-        <img
+        <Image
           src="/images/footer.webp"
           alt="footer-background"
           className="w-full h-full object-cover"
-          loading="lazy"
+
         />
       </div>
 
