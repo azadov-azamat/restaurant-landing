@@ -47,7 +47,7 @@ const Navbar: React.FC = () => {
                   src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=200&auto=format&fit=crop"
                   alt="User avatar"
                   className="h-full w-full object-cover"
-                  loading="eager"
+                  priority
                 />
               </button>
             </div>
