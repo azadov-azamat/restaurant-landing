@@ -17,6 +17,7 @@
     "class-variance-authority": "^0.7.1",
     "framer-motion": "^12.12.2",
     "keen-slider": "^6.8.6",
+    "lighthouse": "^12.8.2",
     "lucide-react": "^0.539.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
