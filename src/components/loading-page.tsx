@@ -35,6 +35,7 @@ export default function LoadingPage() {
             src="/images/main.webp"
             alt="Background"
             onLoad={handleLoad}
+            visibleByDefault={isLoaded}
             className={bgImageClasses}
           />
           <Image
